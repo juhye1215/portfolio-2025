@@ -1,24 +1,24 @@
 import React from 'react';
-import '../styles/_header.scss';
-
+import { Link } from "react-router-dom";
+import '../styles/_nav.scss';
 /**components */
 import Logo from './Logo';
 
-export default function Nav(props) {
-    const menuItems = ['Portfolio', 'About Me', 'Contact'];
+export default function Nav() {
+    const menuItems = ['portfolio', 'about', 'contact'];
 
     return (
         <header className="header">
             <Logo />
 
             <nav className="nav">
-                {/* <ul className="menu">
+                <ul className="menu">
                     {menuItems.map((item, index) => (
                         <li key={index} className="menu-item">
-                            <a href={`#${item.toLowerCase().replace(' ', '-')}`}>{item}</a>
+                            <Link to={`/${item}`} >{item}</Link>
                         </li>
                     ))}
-                </ul> */}
+                </ul>
             </nav>
         </header>
     )

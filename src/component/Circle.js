@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom"; // Add Link for routing
+import { Link } from "react-router-dom";
 import "../styles/_circle.scss";
-import nemoTooltip from '../asset/img/work/nemo-tooltip.png';
+import nemoTooltip from '../img/work/screenshot/nemo.png';
 
 export default function Circle(props) {
     const images = [
@@ -21,7 +21,7 @@ export default function Circle(props) {
         nemoTooltip,
     ];
 
-    const totalRotationTime = 5000; // 회전 지속 시간 (7초)
+    const totalRotationTime = 3000; // 회전 지속 시간 (7초)
     const totalRotationAngle = 2 * Math.PI; // 360도 회전 (2 * Math.PI 라디안)
 
     const [angle, setAngle] = useState(0); // 회전 각도 상태
@@ -127,7 +127,7 @@ export default function Circle(props) {
                 const x = radius * Math.cos(angle + angleOffset); // X 좌표 계산
                 const y = radius * Math.sin(angle + angleOffset); // Y 좌표 계산
                 return (
-                    <Link to={`/project/${index}`} key={index} className="portfolio">
+                    <Link to={`/portfolio/${index}`} key={index} className="portfolio">
                         <img
                             src={src}
                             alt={`portfolio-${index}`}

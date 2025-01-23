@@ -7,7 +7,7 @@ import Circle from '../component/Circle';
 
 export default function Home() {
     return (
-        <main>
+        <main className='home'>
             <Circle />
         </main>
     );

@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Nav from './component/Nav'; // Your navigation component
-import Home from './pages/Home';   // Home page component
-import Project from "./pages/Project";  // Project page component
+import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
+import PortfolioDetail from "./pages/PortfolioDetail";
 
 function App() {
   return (
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/project/:id" element={<Project />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/portfolio/:id" element={<PortfolioDetail />} />
     </Routes>
 
   );
