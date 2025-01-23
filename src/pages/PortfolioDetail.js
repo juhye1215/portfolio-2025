@@ -62,9 +62,9 @@ export default function PortfolioDetail() {
                                 <img
                                     key={index}
                                     src={img}
-                                    alt={`${title} - image ${index + 1}`}
+                                    alt={`${title}-${index + 1}`}
                                     className={layout}
-                                    onClick={() => openModal(<img src={img} alt={`${title} - image ${index + 1}`} />)}
+                                    onClick={() => openModal(<img src={img} alt={`${title}-${index + 1}`} />)}
                                 />
                             ))}
                         </div>

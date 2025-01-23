@@ -16,7 +16,6 @@ export default function Circle() {
         { src: media.Recruiter.images[0], title: 'Recruiter' },
         { src: media.Recruiter.images[0], title: 'Recruiter' },
         { src: media.Recruiter.images[0], title: 'Recruiter' },
-        { src: media.Recruiter.images[0], title: 'Recruiter' },
     ];
 
 
@@ -138,13 +137,13 @@ export default function Circle() {
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={handleMouseLeave}
                         />
-                        {(selectedIndex === index || hoveredIndex === index) && (
+                        {selectedIndex === index &&
                             <div className="tooltip" style={{
                                 top: `calc(60% + ${y}px)`,
                                 left: `calc(46% + ${x}px)`,
                             }}>
                                 {images[selectedIndex].title}</div>
-                        )}
+                        }
                     </Link>
                 );
             })}
