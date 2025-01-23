@@ -85,7 +85,7 @@ export default function Circle() {
     const handleMouseLeave = () => {
         setHoveredIndex(null);
     };
-    
+
     //mouse scroll
     const handleScroll = (event) => {
 
