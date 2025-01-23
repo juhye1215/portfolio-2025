@@ -1,7 +1,12 @@
 @import "../styles/_variable.scss";
 /**home*/
 main.home {
-    margin: 20rem 2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: "pretendard", sans-serif;
+    font-style: normal;
+    min-height: 100vh;
 }
 
 .back-button-container {

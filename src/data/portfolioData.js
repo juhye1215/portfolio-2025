@@ -1,51 +1,117 @@
-import UXcareer1 from '../img/work/screenshot/ux-career1.png';
-import UXcareer2 from '../img/work/screenshot/ux-career2.png';
-import UXvideo from '../img/work/video/ux-pearson.mp4';
-
-import StyleDic1 from '../img/work/screenshot/style-dictionary1.png';
-import StyleDic2 from '../img/work/screenshot/style-dictionary2.png';
-import StyleDic3 from '../img/work/screenshot/style-dictionary3.png';
-import StyleDic4 from '../img/work/screenshot/style-dictionary-token.png';
-import StyleDicVideo from '../img/work/video/style-dictionary-video.mp4';
-
-import eReader1 from '../img/work/screenshot/eReader.jpg';
-import eReader2 from '../img/work/screenshot/eReader2.jpg';
-import eReaderVideo from '../img/work/video/eReader-video.mp4';
+import { media } from "./mediaImport";
 
 const portfolioData = () => [
     {
-        id: '0',
+        id: 0,
         layout: 'web',
         title: 'UX Career',
-        type: "Pearson Career Site",
+        type: "Pearson Career Site development",
         date: "2022",
         link: 'https://ux.pearson.com',
-        video: UXvideo,
-        image: [UXcareer1, UXcareer2],
+        video: media.UXCareer.video,
+        image: media.UXCareer.images,
         description: 'I developed Pearson UX career site, a dedicated platform for recruiting top- tier talent in user experience design.The site showcases available positions and providing detailed role descriptions and requirements. This platform effectively communicates Pearson commitment to enhancing user experiences and attracting skilled professionals to join their team',
     },
     {
-        id: '1',
+        id: 1,
         layout: 'web',
         title: 'Design system',
         type: "style dictionary with the storybook",
         date: "2022",
         link: '',
-        image: [StyleDic1, StyleDic2, StyleDic3, StyleDic4],
-        video: StyleDicVideo,
+        video: media.StyleDictionary.video,
+        image: media.StyleDictionary.images,
         description: 'I utilized Style Dictionary to establish a comprehensive design system and create reusable components in Storybook. By leveraging Style Dictionary powerful tools, I was able to define design tokens as Css, JavaScript format include colors, typography, and spacing, ensuring consistency across all components. Storybook served as a platform to develop and showcase these components interactively, enabling efficient collaboration and seamless integration with development workflows.',
     },
     {
-        id: '2',
+        id: 2,
         layout: 'mobile',
         title: 'eReader Tablet App ',
-        type: "Tablet App Navigation Development",
+        type: "P+ Tablet App Navigation Development",
         date: "2024",
         link: '',
-        description: 'This is the description for portfolio 1.',
-        image: [eReader1, eReader2],
-        video: eReaderVideo,
+        video: media.eReader.video,
+        image: media.eReader.images,
+        description: 'The application leverages the larger screen size of tablets, offering a layout that maximizes usability and functionality. This is developed using React Native, the app supports both iOS and Android tablets, ensuring consistency and performance across platforms. Designed specifically to enhance user navigation. The app focuses on providing a seamless and intuitive navigation experience tailored for tablet users.',
     },
+    {
+        id: 3,
+        layout: 'web',
+        title: 'Pearson Recruiter bundles ',
+        type: "Pearson recruiter dashboard development",
+        date: "2024",
+        link: '',
+        video: media.Recruiter.video,
+        image: media.Recruiter.images,
+        description: 'As part of the company rebranding initiative, I developed and implemented an intuitive dashboard for both recruiters and job applicants. The recruiter dashboard provides real-time insights into candidate applications, allowing recruiters to assess candidates abilities, track the hiring process, and send assessment invitations. Recruiters can invite candidates to take assessments, and applicants can immediately begin their evaluations once they receive the invitation link. Although the recruiter and applicant dashboards are distinct, they are seamlessly connected, ensuring a smooth and efficient workflow between both parties. This dual dashboard system was designed to streamline the recruitment process and enhance the overall hiring experience',
+    },
+    {
+        id: 4,
+        layout: 'web',
+        title: 'P+ Auth page ',
+        type: "Global Navigation Development",
+        date: "2023",
+        link: '',
+        video: media.Pauth.video,
+        image: media.Pauth.images,
+        description: 'As part of the P+ project, I developed a dynamic global navigation system that adapts based on the users authentication status. The navigation renders differently when the user is logged in versus when logged out, providing a tailored experience for each scenario. Additionally, the navigation system was designed with a user-centric approach, allowing for easy integration of images, making the structure both visually appealing and user-friendly.',
+    },
+    {
+        id: 5,
+        layout: 'web',
+        title: 'Pearson Recruiter bundles ',
+        type: "Pearson rebranding page for recruiter",
+        date: "2024",
+        link: '',
+        video: media.Recruiter.video,
+        image: media.Recruiter.images,
+        description: '',
+    },
+    {
+        id: 6,
+        layout: 'web',
+        title: 'Pearson Recruiter bundles ',
+        type: "Pearson rebranding page for recruiter",
+        date: "2024",
+        link: '',
+        video: media.Recruiter.video,
+        image: media.Recruiter.images,
+        description: '.',
+    },
+    {
+        id: 7,
+        layout: 'web',
+        title: 'Pearson Recruiter bundles ',
+        type: "Pearson rebranding page for recruiter",
+        date: "2024",
+        link: '',
+        video: media.Recruiter.video,
+        image: media.Recruiter.images,
+        description: '',
+    },
+    {
+        id: 8,
+        layout: 'web',
+        title: 'Pearson Recruiter bundles ',
+        type: "Pearson rebranding page for recruiter",
+        date: "2024",
+        link: '',
+        video: media.Recruiter.video,
+        image: media.Recruiter.images,
+        description: '',
+    },
+    {
+        id: 9,
+        layout: 'web',
+        title: 'Pearson Recruiter bundles ',
+        type: "Pearson rebranding page for recruiter",
+        date: "2024",
+        link: '',
+        video: media.Recruiter.video,
+        image: media.Recruiter.images,
+        description: '',
+    },
+
 ];
 
 export default portfolioData;

@@ -16,7 +16,7 @@ export default function PortfolioDetail() {
     const [isModalOpen, setModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState(null);
 
-    const portfolio = portfolioData().find((item) => item.id === id);
+    const portfolio = portfolioData().find((item) => item.id === Number(id));
     const { title, description, layout, type, date, link } = portfolio;
 
     const openModal = (content) => {

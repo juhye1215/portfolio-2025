@@ -1,36 +1,36 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/_circle.scss";
-import nemoTooltip from '../img/work/screenshot/nemo.png';
+import { media } from "../data/mediaImport";
 
-export default function Circle(props) {
+export default function Circle() {
+
     const images = [
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
-        nemoTooltip,
+        { src: media.UXCareer.images[0], title: 'View UX Career site' },
+        { src: media.StyleDictionary.images[3], title: 'Style Token Design System' },
+        { src: media.eReader.images[1], title: 'View eReader tablet' },
+        { src: media.Recruiter.images[3], title: 'View Recruiter dashboard' },
+        { src: media.Recruiter.images[0], title: 'Recruiter' },
+        { src: media.Recruiter.images[0], title: 'Recruiter' },
+        { src: media.Recruiter.images[0], title: 'Recruiter' },
+        { src: media.Recruiter.images[0], title: 'Recruiter' },
+        { src: media.Recruiter.images[0], title: 'Recruiter' },
+        { src: media.Recruiter.images[0], title: 'Recruiter' },
+        { src: media.Recruiter.images[0], title: 'Recruiter' },
     ];
 
-    const totalRotationTime = 3000; // 회전 지속 시간 (7초)
+
+
+    const totalRotationTime = 3000; // 회전 지속 시간 (3초)
     const totalRotationAngle = 2 * Math.PI; // 360도 회전 (2 * Math.PI 라디안)
 
     const [angle, setAngle] = useState(0); // 회전 각도 상태
-    const [radius, setRadius] = useState(100); // 원의 반지름 상태 (초기값 100)
-    const [selectedIndex, setSelectedIndex] = useState(null); // 선택된 이미지 인덱스를 추적
+    const [radius, setRadius] = useState(30); // 원의 반지름 상태 (초기값 60)
+    const [selectedIndex, setSelectedIndex] = useState(null);
     const animationFrameId = useRef(null); // 애니메이션 프레임 ID를 저장할 ref
     const startTimeRef = useRef(null); // 애니메이션 시작 시간을 저장할 ref
     const scrollTimeoutRef = useRef(null);
-
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     useEffect(() => {
         const updateRadius = () => {
@@ -42,33 +42,27 @@ export default function Circle(props) {
                 setRadius(120);
             }
         };
-
         updateRadius();
         window.addEventListener("resize", updateRadius);
-
-        // 회전 애니메이션
+        /**rotate images */
         const rotateImages = (timestamp) => {
             if (!startTimeRef.current) {
                 startTimeRef.current = timestamp;
             }
 
-            const elapsedTime = timestamp - startTimeRef.current; // 경과 시간 계산
+            const elapsedTime = timestamp - startTimeRef.current;
             const progress = Math.min(elapsedTime / totalRotationTime, 1);
-
-            // 회전 각도 계산 (7초 동안 360도 회전)
             const currentAngle = totalRotationAngle * progress;
             setAngle(currentAngle);
 
             if (window.innerWidth <= 480) {
-                // 모바일에서는 50에서 300으로 증가
                 const currentRadius = 30 + (200 - 30) * progress;
                 setRadius(currentRadius);
             } else if (window.innerWidth <= 768) {
                 const currentRadius = 60 + (350 - 60) * progress;
                 setRadius(currentRadius);
             } else {
-                // 데스크탑에서는 100에서 600으로 증가
-                const currentRadius = 120 + (650 - 120) * progress;
+                const currentRadius = 120 + (550 - 120) * progress;
                 setRadius(currentRadius);
             }
 
@@ -84,22 +78,27 @@ export default function Circle(props) {
         };
     }, []);
 
-    //스크롤이벤트
+    /**mouse hover */
+    const handleMouseEnter = (index) => {
+        setHoveredIndex(index);
+    };
+    const handleMouseLeave = () => {
+        setHoveredIndex(null);
+    };
+    
+    //mouse scroll
     const handleScroll = (event) => {
-        // Prevent skipping images by controlling scroll speed
-        if (scrollTimeoutRef.current) return; // Skip if the event is too fast
 
+        if (scrollTimeoutRef.current) return;
         scrollTimeoutRef.current = setTimeout(() => {
             scrollTimeoutRef.current = null;
-        }, 150); // Adjust the 150ms delay to control the scroll speed
+        }, 150);
 
         const scrollDirection = event.deltaY;
-
-        // Move to next or previous image based on scroll direction
         if (scrollDirection > 0) {
-            setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length); // Scroll down, go to the next image
+            setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length);
         } else {
-            setSelectedIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length); // Scroll up, go to the previous image
+            setSelectedIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
         }
     };
 
@@ -112,7 +111,7 @@ export default function Circle(props) {
 
     return (
         <div className="circle-container">
-            <h1>portfolio 2025</h1>
+            <h1>portfolio 2025 </h1>
             <ul>
                 <li>frontend engineer</li>
                 <li>∙</li>
@@ -121,28 +120,30 @@ export default function Circle(props) {
                 <li>design technologist</li>
             </ul>
 
-
-            {images.map((src, index) => {
-                const angleOffset = (index / images.length) * Math.PI * 2; // 각 이미지의 초기 각도
-                const x = radius * Math.cos(angle + angleOffset); // X 좌표 계산
-                const y = radius * Math.sin(angle + angleOffset); // Y 좌표 계산
+            {images.map((image, index) => {
+                const angleOffset = (index / images.length) * Math.PI * 2;
+                const x = radius * Math.cos(angle + angleOffset);
+                const y = radius * Math.sin(angle + angleOffset);
                 return (
                     <Link to={`/portfolio/${index}`} key={index} className="portfolio">
                         <img
-                            src={src}
+                            src={image.src}
                             alt={`portfolio-${index}`}
                             style={{
                                 top: `calc(50% + ${y}px)`,
                                 left: `calc(50% + ${x}px)`,
-                                transform: selectedIndex === index ? "scale(2)" : "none",
+                                transform: (selectedIndex === index || hoveredIndex === index) ? "scale(1.5)" : "none",
                                 transition: "transform 0.3s ease",
                             }}
+                            onMouseEnter={() => handleMouseEnter(index)}
+                            onMouseLeave={handleMouseLeave}
                         />
-                        {selectedIndex === index && (
+                        {(selectedIndex === index || hoveredIndex === index) && (
                             <div className="tooltip" style={{
                                 top: `calc(60% + ${y}px)`,
-                                left: `calc(40% + ${x}px)`,
-                            }}>This is tooltip {index + 1}</div>
+                                left: `calc(46% + ${x}px)`,
+                            }}>
+                                {images[selectedIndex].title}</div>
                         )}
                     </Link>
                 );

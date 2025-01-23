@@ -2,8 +2,8 @@
 /* circle */
 .circle-container {
     position: relative;
-    width: 80vw;
-    height: 80vw;
+    width: 50vw;
+    height: 50vw;
     max-width: 50rem;
     max-height: 50rem;
     margin: 0 auto;
@@ -57,20 +57,14 @@
     }
 
     .portfolio {
-        img {
+  
+        img{
             position: absolute;
             width: 3rem;
             height: 3rem;
             object-fit: cover;
             border-radius: 50%;
             cursor: pointer;
-            &:hover {
-                transform: scale(2);
-                -webkit-transform: scale(2);
-                -moz-transform: scale(2);
-                -ms-transform: scale(2);
-                -o-transform: scale(2);
-            }
             @media (max-width: $tablet) {
                 width: 2rem;
                 height: 2rem;
@@ -84,16 +78,22 @@
 
     .tooltip {
         position: absolute;
-
-        padding: 5px 10px;
+        width: 7rem;
+        padding: 0.25rem 0.5rem;
         background-color: #333;
         color: #fff;
-        border-radius: 5px;
-        font-size: 1.875rem;
-        white-space: nowrap;
-        pointer-events: none; /* Prevents tooltip from blocking image hover */
+        border-radius: 16px;
+        font-size: 1rem;
+        text-align: center;
+        white-space: wrap;
+        pointer-events: none;
         z-index: 10;
         opacity: 0.8;
+        text-transform: capitalize;
         transition: opacity 0.2s ease-in-out;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
     }
 }
