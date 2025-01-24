@@ -75,7 +75,7 @@ export default function Circle() {
             window.removeEventListener("resize", updateRadius);
             cancelAnimationFrame(animationFrameId.current);
         };
-    }, []);
+    }, [totalRotationAngle]);
 
     /**mouse hover */
     const handleMouseEnter = (index) => {
@@ -106,7 +106,7 @@ export default function Circle() {
         return () => {
             window.removeEventListener("wheel", handleScroll);
         };
-    }, []);
+    }, [handleScroll]);
 
     return (
         <div className="circle-container">
