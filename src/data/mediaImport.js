@@ -26,6 +26,12 @@ import Pauth3 from '../img/work/screenshot/P+nav3.png';
 import Pauth4 from '../img/work/screenshot/P+nav4.png'
 import PauthVideo from '../img/work/video/P+Auth.mp4';
 
+import Nautilus from '../img/work/screenshot/nautilus.png';
+import Nautilus2 from '../img/work/screenshot/nautilus1.png';
+import Nautilus3 from '../img/work/screenshot/nautilus2.png';
+import Nautilus4 from '../img/work/screenshot/nautilus3.png'
+import NautilusVideo from '../img/work/video/nautilus-video.mp4';
+
 export const media = {
     UXCareer: {
         images: [UXcareer1, UXcareer2],
@@ -46,5 +52,9 @@ export const media = {
     Pauth: {
         images: [Pauth, Pauth2, Pauth3, Pauth4],
         video: PauthVideo,
+    },
+    Nautilus: {
+        images: [Nautilus, Nautilus2, Nautilus3, Nautilus4],
+        video: NautilusVideo,
     },
 };
