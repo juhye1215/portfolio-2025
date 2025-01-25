@@ -5,7 +5,7 @@ import portfolioData from '../data/portfolioData';
 /** icon */
 import { IoChevronBackOutline, IoClose } from 'react-icons/io5';
 /** style */
-import '../styles/_portfolio.scss';
+import '../styles/_portfolio-detail.scss';
 /*component*/
 import Nav from '../component/Nav';
 
@@ -36,13 +36,12 @@ export default function PortfolioDetail() {
                     className="back-button"
                     onClick={() => navigate('/portfolio')}
                 />
-                <h1 className='title'>{title}</h1>
-                <div></div>
             </div>
 
-            <main className="portfolio-container">
+            <main className="portfolio-detail-container">
+                <h1 className='title'>{title}</h1>
+                
                 <div className="content-layout">
-
                     <div className="media-container">
 
                         <div className="video-container">

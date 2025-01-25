@@ -1,0 +1,594 @@
+/* Define breakpoints as variables */
+/* Define breakpoints as variables */
+/**home*/
+main.home {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.name-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.name-container img.name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 3s ease, left 3s ease, opacity 3s ease, transform 3s ease;
+}
+.name-container img.name.scrolled {
+  top: 1%;
+  left: 1%;
+  opacity: 0;
+  transform: scale(0.5) translate(-50%, -50%);
+  -webkit-transform: scale(0.5) translate(-50%, -50%);
+  -moz-transform: scale(0.5) translate(-50%, -50%);
+  -ms-transform: scale(0.5) translate(-50%, -50%);
+  -o-transform: scale(0.5) translate(-50%, -50%);
+}
+.name-container h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.25rem;
+  letter-spacing: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  transition: opacity 3s ease-in-out;
+  opacity: 1;
+}
+.name-container h1.title-scrolled {
+  animation: titleOpacity 1.5s ease-in-out forwards;
+}
+@keyframes titleOpacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+ul.my-field {
+  position: absolute;
+  top: 75vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.875rem;
+  transition: font-size 0.3s ease;
+  transition: top 3s ease, transform 3s ease;
+}
+ul.my-field.text-scrolled {
+  position: fixed;
+  top: 10%;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  animation: fontSize 3s ease-in-out;
+}
+@keyframes fontSize {
+  0% {
+    font-size: 0.875rem;
+  }
+  50% {
+    font-size: 2rem;
+  }
+  100% {
+    font-size: 3rem;
+  }
+}
+ul.my-field li {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.4vw;
+}
+
+.work {
+  height: 500px;
+}
+.work .card {
+  width: 250px;
+  height: 150px;
+  margin: 0 10px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.work .section {
+  padding: 50px;
+}
+
+.back-button-container {
+  position: absolute;
+  top: 10vh;
+  left: 1rem;
+  cursor: pointer;
+  margin: 1rem 3rem;
+}
+@media (max-width: 768px) {
+  .back-button-container {
+    margin: 1rem 0.25rem;
+  }
+}
+.back-button-container svg {
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+/* Define breakpoints as variables */
+/* circle */
+.circle-container {
+  position: relative;
+  width: 50vw;
+  height: 50vw;
+  max-width: 50rem;
+  max-height: 50rem;
+  margin: 0 auto;
+  background-image: url("../img/work/video/Name-video--portfolio.gif");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-container h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.25rem;
+  letter-spacing: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .circle-container h1 {
+    font-size: 0.875rem;
+  }
+}
+.circle-container ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: 40rem;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .circle-container ul {
+    top: 30rem;
+  }
+}
+@media (max-width: 480px) {
+  .circle-container ul {
+    top: 20rem;
+  }
+}
+.circle-container ul li {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.4vw;
+}
+.circle-container .portfolio img {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .circle-container .portfolio img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .circle-container .portfolio img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+.circle-container .tooltip {
+  position: absolute;
+  width: 7rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 16px;
+  font-size: 1rem;
+  text-align: center;
+  white-space: wrap;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.8;
+  text-transform: capitalize;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+/* Define breakpoints as variables */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.25rem;
+  padding: 0 4rem;
+  z-index: 99;
+  opacity: 1;
+  transition: transform 3s ease-in-out;
+  background-color: black;
+}
+@media (max-width: 768px) {
+  .nav-wrapper {
+    padding: 0.85rem 1em;
+  }
+}
+.nav-wrapper.show {
+  animation: fadeInOpacity 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+}
+.logo img {
+  max-width: 150px;
+}
+.logo .icon-j {
+  fill: rgb(255, 158, 188);
+}
+.logo .circle-svg {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
+.logo svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  height: 1.75rem;
+  margin: 0 2px;
+}
+
+.nav {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav .menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav .menu .menu-item {
+  margin-right: 1.25rem;
+}
+.nav .menu .menu-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 1.125rem;
+}
+.nav .menu .menu-item a:hover {
+  color: #007bff;
+}
+
+/* Define breakpoints as variables */
+main.portfolio-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main.portfolio-container h1.page-title {
+  margin-top: 10vh;
+  font-family: "circularA", sans-serif;
+  color: #fff;
+  font-size: 10vw;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+main.portfolio-container .card-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 480px) {
+  main.portfolio-container .card-container {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+.portfolio-card {
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.portfolio-card:hover {
+  transform: translateY(-10px);
+}
+.portfolio-card .card-image {
+  height: 412px;
+  overflow: hidden;
+  border-radius: 0.875rem;
+}
+.portfolio-card .card-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.portfolio-card .card-text {
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  text-align: left;
+}
+.portfolio-card .card-text h3 {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Define breakpoints as variables */
+main.portfolio-detail-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main.portfolio-detail-container h1.title {
+  margin-top: 10vh;
+  font-family: "circularA", sans-serif;
+  color: #fff;
+  font-size: 4vw;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  main.portfolio-detail-container h1.title {
+    font-size: 2.5rem;
+  }
+}
+
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.media-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.media-container .video-container {
+  width: 100%;
+  transition: transform 0.3s ease;
+  text-align: center;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .media-container .video-container {
+    flex: 2;
+  }
+}
+.media-container .video-container video {
+  width: 100%;
+  max-width: 60rem;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .media-container .video-container video {
+    max-width: 600px;
+  }
+}
+.media-container .video-container video.tablet {
+  max-width: 31.25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 3/4;
+  border-radius: 36px;
+}
+@media (max-width: 768px) {
+  .media-container .video-container video.tablet {
+    width: 100%;
+  }
+}
+.media-container .video-container video.mobile {
+  border-radius: 70px;
+  max-width: 22.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .media-container .video-container video.mobile {
+    width: 100%;
+  }
+}
+.media-container .video-container:hover {
+  transform: scale(1.05);
+}
+.media-container .screenshot-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .media-container .screenshot-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.media-container .screenshot-container img {
+  width: 22.5%;
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .media-container .screenshot-container img {
+    width: 47.5%;
+  }
+}
+.media-container .screenshot-container img:hover {
+  transform: scale(1.05);
+}
+.media-container .screenshot-container img.tablet {
+  max-width: 15rem;
+  aspect-ratio: 3/4;
+}
+.media-container .screenshot-container img.mobile {
+  max-width: 15rem;
+  aspect-ratio: 9/19;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+.text-container {
+  margin-top: 2rem;
+  color: #fff;
+}
+.text-container .subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+@media (max-width: 480px) {
+  .text-container .subtitle {
+    flex-direction: column;
+  }
+}
+.text-container .subtitle h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.text-container p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.text-container a.link {
+  color: #dbceff;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* modal*/
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  border-radius: 16px;
+  padding: 3rem 1rem 1rem 1rem;
+  max-width: 90%;
+  max-width: 1440px;
+  max-height: 90%;
+  overflow: auto;
+}
+.modal-content img,
+.modal-content video {
+  border-radius: 16px;
+  max-width: 100%;
+  max-height: 80vh;
+}
+.modal-content.mobile img,
+.modal-content.mobile video {
+  border-radius: 80px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.close-button svg {
+  width: 100%;
+  height: 100%;
+  color: black;
+}/*# sourceMappingURL=styles.css.map */

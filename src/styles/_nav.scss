@@ -1,59 +1,88 @@
 @import "../styles/_variable.scss";
 
-.header {
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem;
+    height: 6.25rem;
+    padding: 0 4rem;
+    z-index: 99;
+    opacity: 1;
+    transition: transform $transition-duration ease-in-out;
+    background-color: black;
+
     @media (max-width: $tablet) {
         padding: 0.85rem 1em;
     }
+    &.show {
+        animation: fadeInOpacity 1.5s ease-in-out forwards;
+    }
+}
 
-    .logo {
-        flex: 1;
-        display: flex;
-        align-items: baseline;
-        .icon-j {
-            fill: rgb(255, 158, 188);
-        }
-        .circle-svg {
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-        }
-        svg {
-            display: inline-block;
-            vertical-align: middle;
-            width: auto;
-            height: 1.75rem;
-            margin: 0 2px;
-        }
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: baseline;
+    img {
+        max-width: 150px;
     }
 
-    .nav {
-        flex: 2;
+    .icon-j {
+        fill: rgb(255, 158, 188);
+    }
+    .circle-svg {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+    }
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+        height: 1.75rem;
+        margin: 0 2px;
+    }
+}
+
+.nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+
+    .menu {
+        list-style: none;
         display: flex;
-        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
 
-        .menu {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
+        .menu-item {
+            margin-right: 1.25rem;
 
-            .menu-item {
-                margin-right: 1.25rem;
-
-                a {
-                    text-decoration: none;
-                    color: white;
-                    font-size: 1.25rem;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    padding: 0 1.125rem;
-                    &:hover {
-                        color: #007bff;
-                    }
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 1.25rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                padding: 0 1.125rem;
+                &:hover {
+                    color: #007bff;
                 }
             }
         }

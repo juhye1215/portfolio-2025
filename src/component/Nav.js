@@ -4,18 +4,18 @@ import '../styles/_nav.scss';
 /**components */
 import Logo from './Logo';
 
-export default function Nav() {
+export default function Nav({ showNav }) {
     const menuItems = ['portfolio', 'about', 'contact'];
 
     return (
-        <header className="header">
+        <header className={`nav-wrapper ${showNav ? 'show' : ''}`}>
             <Logo />
 
             <nav className="nav">
                 <ul className="menu">
                     {menuItems.map((item, index) => (
                         <li key={index} className="menu-item">
-                            <Link to={`/${item}`} >{item}</Link>
+                            <Link to={`/${item}`} smooth={true} duration={500}>{item}</Link>
                         </li>
                     ))}
                 </ul>
