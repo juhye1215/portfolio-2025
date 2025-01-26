@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import '../styles/_nav.scss';
-import Name from '../img/work/video/name.gif';
 import { ReactComponent as IconJ } from '../img/svg/J.svg';
 import { ReactComponent as IconM } from '../img/svg/color-m.svg';
 import { ReactComponent as IconO } from '../img/svg/color-o.svg';
@@ -14,8 +12,7 @@ export default function Logo() {
     return (
         <Link to="/" >
             <div className='logo' >
-                <img src={Name} alt='logo' />
-                {/* <IconJ className="icon-j" />
+                <IconJ className="icon-j" />
                 <svg className="circle-svg">
                     <circle cx="5" cy="5" r="5" fill="orange" />
                 </svg>
@@ -23,7 +20,7 @@ export default function Logo() {
                 <IconO />
                 <IconO1 />
                 <IconR />
-                <IconE /> */}
+                <IconE />
             </div>
         </Link>
     )

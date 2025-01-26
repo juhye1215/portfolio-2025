@@ -1,4 +1,4 @@
-@import "../styles/_variable.scss";
+
 /**home*/
 main.home {
     width: 100%;
@@ -8,7 +8,6 @@ main.home {
 
 .name-container {
     position: relative;
-    height: 100vh;
     width: 100%;
 
     img.name {
@@ -63,7 +62,8 @@ main.home {
     }
 }
 
-ul.my-field {
+ul.job-title {
+    margin: 1.5em 0 0 0;
     position: absolute;
     top: 75vh;
     left: 50%;
@@ -79,7 +79,7 @@ ul.my-field {
     &.text-scrolled {
         position: fixed;
         top: 10%;
-        font-size: 3rem;
+        font-size: 5rem;
         transform: translate(-50%, -50%);
         animation: fontSize 3s ease-in-out;
     }
@@ -88,10 +88,10 @@ ul.my-field {
             font-size: 0.875rem;
         }
         50% {
-            font-size: 2rem;
+            font-size: 3rem;
         }
         100% {
-            font-size: 3rem;
+            font-size: 5rem;
         }
     }
 
@@ -106,7 +106,9 @@ ul.my-field {
 
 .work {
     height: 500px;
-
+    color: #fff;
+    font-size: 3rem;
+    text-transform: uppercase;
     .card {
         width: 250px;
         height: 150px;

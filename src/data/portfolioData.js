@@ -15,6 +15,7 @@ const portfolioData = () => [
     {
         id: 1,
         layout: 'web',
+        category: 'design system',
         title: 'Design system',
         type: "style dictionary with the storybook",
         date: "2022",
@@ -26,6 +27,7 @@ const portfolioData = () => [
     {
         id: 2,
         layout: 'tablet',
+        category: 'app',
         title: 'eReader Tablet App ',
         type: "P+ Tablet App Navigation Development",
         date: "2024",
@@ -37,6 +39,7 @@ const portfolioData = () => [
     {
         id: 3,
         layout: 'web',
+        category: 'web',
         title: 'Pearson Recruiter bundles ',
         type: "Pearson recruiter dashboard development",
         date: "2024",
@@ -48,6 +51,7 @@ const portfolioData = () => [
     {
         id: 4,
         layout: 'web',
+        category: 'navigation',
         title: 'P+ Navigation ',
         type: "Global Navigation Development",
         date: "2023",
@@ -59,6 +63,7 @@ const portfolioData = () => [
     {
         id: 5,
         layout: 'mobile',
+        category: 'app',
         title: 'ELL Learning app ',
         type: "English Learning Language mobile app ",
         date: "2023",
@@ -70,6 +75,7 @@ const portfolioData = () => [
     {
         id: 6,
         layout: 'web',
+        category: 'design system',
         title: 'Nemo Design System',
         type: "Pearson ELL Design System",
         date: "2024",
@@ -81,6 +87,7 @@ const portfolioData = () => [
     {
         id: 7,
         layout: 'mobile',
+        category: 'app',
         title: 'P+ mobile app',
         type: "App develop with ios & android",
         date: "2024",
@@ -90,28 +97,29 @@ const portfolioData = () => [
         description: 'I developed the Pearson+ mobile application prototype using React Native, enabling seamless functionality on both iOS and Android platforms. The app provides an enhanced user experience for accessing educational content, offering features such as interactive learning tools, offline access, and personalized recommendations.',
     },
     {
-        id: 8,
-        layout: 'web',
-        title: 'Pearson Recruiter bundles ',
-        type: "Pearson rebranding page for recruiter",
+        id: 7,
+        layout: 'mobile',
+        category: 'app',
+        title: 'P+ mobile app',
+        type: "App develop with ios & android",
         date: "2024",
-        link: '',
-        video: media.Recruiter.video,
-        image: media.Recruiter.images,
-        description: '',
+        link: 'https://www.pearson.com/en-us/pearsonplus/mobile-app.html',
+        video: media.Pplus.video,
+        image: media.Pplus.images,
+        description: 'I developed the Pearson+ mobile application prototype using React Native, enabling seamless functionality on both iOS and Android platforms. The app provides an enhanced user experience for accessing educational content, offering features such as interactive learning tools, offline access, and personalized recommendations.',
     },
     {
-        id: 9,
-        layout: 'web',
-        title: 'Pearson Recruiter bundles ',
-        type: "Pearson rebranding page for recruiter",
+        id: 7,
+        layout: 'mobile',
+        category: 'app',
+        title: 'P+ mobile app',
+        type: "App develop with ios & android",
         date: "2024",
-        link: '',
-        video: media.Recruiter.video,
-        image: media.Recruiter.images,
-        description: '',
+        link: 'https://www.pearson.com/en-us/pearsonplus/mobile-app.html',
+        video: media.Pplus.video,
+        image: media.Pplus.images,
+        description: 'I developed the Pearson+ mobile application prototype using React Native, enabling seamless functionality on both iOS and Android platforms. The app provides an enhanced user experience for accessing educational content, offering features such as interactive learning tools, offline access, and personalized recommendations.',
     },
-
 ];
 
 export default portfolioData;

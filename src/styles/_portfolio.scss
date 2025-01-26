@@ -1,63 +1,19 @@
-@import "../styles/_variable.scss";
-
-main.portfolio-container {
+.portfolio-container {
     width: 100%;
+    height: auto;
     max-width: 1440px;
     margin: 0 auto;
+    @media (max-width: $tablet) {
+        padding: 0 1rem;
+    }
 
     h1.page-title {
-        margin-top: 10vh;
+        margin-top: 12vh;
         font-family: "circularA", sans-serif;
         color: #fff;
-        font-size: 10vw;
+        font-size: 5rem;
         font-weight: 300;
         text-align: center;
         text-transform: uppercase;
-    }
-
-    .card-container {
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(2, 1fr);
-        @media (max-width: $mobile-lg) {
-            grid-template-columns: 1fr;
-            gap: 0.5rem;
-        }
-    }
-}
-
-.portfolio-card {
-    overflow: hidden;
-    transition:
-        transform 0.2s ease-in-out,
-        box-shadow 0.2s ease-in-out;
-    &:hover {
-        transform: translateY(-10px);
-    }
-
-    .card-image {
-        height: 412px;
-        overflow: hidden;
-        border-radius: 0.875rem;
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-    }
-
-    .card-text {
-        margin-bottom: 2rem;
-        padding: 1rem 0;
-        text-align: left;
-
-        h3 {
-            padding: 1rem 0;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            color: white;
-            text-transform: uppercase;
-        }
     }
 }

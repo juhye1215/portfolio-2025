@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import PortfolioDetail from "./pages/PortfolioDetail";
+
 function App() {
   return (
     <>

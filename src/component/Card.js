@@ -1,23 +1,18 @@
 import React, { useContext } from 'react';
 
+import { Link } from "react-router-dom";
+import { media } from "../data/mediaImport";
 
-export default function Card({ onClick, selected, title, itemId }) {
+export default function Card({ image, title, link }) {
 
     return (
-        <div
-            onClick={() => onClick()} // 클릭 시 선택 상태 토글
-            style={{
-                width: '160px',
-                margin: '10px',
-                cursor: 'pointer',
-                backgroundColor: selected ? 'lightgreen' : 'lightgray',
-            }}
-            tabIndex={0}
-        >
-            <div className="card" style={{ padding: '10px', border: '1px solid #ccc' }}>
-                <div>{title}</div>
-
+        <Link to={link} >
+            <div className="card">
+                <img src={image} alt={title} />
+                <div className="card-text">
+                    <p>{title}</p>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }

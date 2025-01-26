@@ -1,0 +1,65 @@
+/* card-container의 기본 스타일 */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    max-width: 1280px;
+    /* 스크롤바 스타일 */
+    &::-webkit-scrollbar {
+        height: 4px; /* 가로 스크롤바 높이 */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: pink; /* 스크롤바 색상 */
+        border-radius: 10px; /* 둥근 모서리 */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; /* 트랙 배경 색상 */
+    }
+    @media (max-width: $tablet) {
+        justify-content: start;
+    }
+}
+
+/* card의 기본 스타일 */
+.card {
+    max-width: 25rem;
+    height: auto;
+    max-height: 500px;
+    flex-shrink: 0;
+    background-color: transparent;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    &:hover img {
+        transform: scale(1.05);
+  
+    }
+    img {
+        height: 400px;
+        object-fit: cover;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        width: 100%;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+    }
+    .card-text {
+        padding: 0.5rem 0;
+        text-align: left;
+        p {
+            text-transform: capitalize;
+            font-size: 1.25rem;
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+}

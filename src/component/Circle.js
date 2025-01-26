@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/_circle.scss";
 import { media } from "../data/mediaImport";
 
 export default function Circle() {
