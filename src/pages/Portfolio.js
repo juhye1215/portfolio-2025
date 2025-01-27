@@ -1,73 +1,94 @@
-import React, { useRef } from 'react';
-import { Link, useNavigate } from "react-router-dom";
+import React, { useRef, useEffect } from 'react';
 import portfolioData from "../data/portfolioData";
-/** icon */
-import { IoChevronBackOutline } from 'react-icons/io5';
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
+
+import "react-horizontal-scrolling-menu/dist/styles.css";
+
 /*component*/
 import Nav from '../component/Nav';
 import Card from '../component/Card';
+import BackButton from '../component/BackButton';
 
 export default function Portfolio() {
-    const navigate = useNavigate();
-    const portfolioItems = portfolioData();
-    const cardContainerRef = useRef(null);
-    const handleHorizontalScroll = (e) => {
-        e.preventDefault();
-        if (cardContainerRef.current) {
-            cardContainerRef.current.scrollLeft += e.deltaY * 2;
-        }
-    };
 
+    const portfolioItems = portfolioData();
+    /**filter */
     const filterItemsByCategory = (category) =>
         portfolioItems.filter((item) => item.category === category);
 
     return (
         <>
             <Nav />
-            <div className="back-button-container">
-                <IoChevronBackOutline
-                    className="back-button"
-                    onClick={() => navigate('/')}
-                />
-            </div>
+            <main className='page'>
+                <div className='row'>
+                    <BackButton to="/" />
+                    <h1 className="page-title">projects</h1>
+                    <div></div>
+                </div>
 
-            <div className="portfolio-container">
-                <h1 className="page-title">projects</h1>
+                <div className="portfolio-container">
+                    <section className='card-wrapper'>
+                        <h2>mobile app Development</h2>
+                        <div className='line'></div>
+                        <ScrollMenu>
+                            {filterItemsByCategory('app').map((item) => (
+                                <Card
+                                    key={item.id}
+                                    image={item.image[1]}
+                                    title={item.title}
+                                    layout={item.layout}
+                                    link={`/portfolio/${item.id}`}
+                                />
+                            ))}
+                        </ScrollMenu>
+                    </section>
 
-                {/* Mobile Section */}
-                <h2>mobile</h2>
-                <section
-                    className="card-container custom-scrollbar"
-                    onWheel={handleHorizontalScroll}
-                    ref={cardContainerRef}
-                >
-                    {filterItemsByCategory('app').map((item, index) => (
-                        <Card
-                            key={index}
-                            image={item.image[1]}
-                            title={item.title}
-                            link={`/portfolio/${index}`}
-                        />
-                    ))}
-                </section>
+                    <section className='card-wrapper'>
+                        <h2>Web Development</h2>
+                        <div className='line'></div>
+                        <ScrollMenu>
+                            {filterItemsByCategory('web').map((item) => (
+                                <Card
+                                    key={item.id}
+                                    image={item.image[1]}
+                                    title={item.title}
+                                    link={`/portfolio/${item.id}`}
+                                />
+                            ))}
+                        </ScrollMenu>
+                    </section>
 
-                {/* Design System Section */}
-                <h2>design System</h2>
-                {/* <section
-                    className="card-container"
-                    onWheel={(e) => handleHorizontalScroll(e, designSystemRef)}
-                    ref={designSystemRef}
-                >
-                    {filterItemsByCategory('design system').map((item, index) => (
-                        <Card
-                            key={index}
-                            image={item.image[1]}
-                            title={item.title}
-                            link={`/portfolio/${index}`}
-                        />
-                    ))}
-                </section> */}
-            </div>
+                    <section className='card-wrapper'>
+                        <h2>design System Development</h2>
+                        <div className='line'></div>
+                        <ScrollMenu>
+                            {filterItemsByCategory('design system').map((item) => (
+                                <Card
+                                    key={item.id}
+                                    image={item.image[2]}
+                                    title={item.title}
+                                    link={`/portfolio/${item.id}`}
+                                />
+                            ))}
+                        </ScrollMenu>
+                    </section>
+
+                    <section className='card-wrapper'>
+                        <h2>navigation Development</h2>
+                        <div className='line'></div>
+                        <ScrollMenu>
+                            {filterItemsByCategory('navigation').map((item) => (
+                                <Card
+                                    key={item.id}
+                                    image={item.image[0]}
+                                    title={item.title}
+                                    link={`/portfolio/${item.id}`}
+                                />
+                            ))}
+                        </ScrollMenu>
+                    </section>
+                </div >
+            </main >
         </>
     );
 }

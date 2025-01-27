@@ -1,19 +1,27 @@
+main.page {
+    padding: 8rem 4rem 4rem 4rem;
+    @media (max-width: $tablet) {
+        padding: 8rem 1em 1rem 1rem;
+    }
+
+    h1.page-title {
+        font-family: "circularA", sans-serif;
+        color: #fff;
+        font-size: 3.5rem;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
 .portfolio-container {
     width: 100%;
     height: auto;
     max-width: 1440px;
     margin: 0 auto;
-    @media (max-width: $tablet) {
-        padding: 0 1rem;
-    }
-
-    h1.page-title {
-        margin-top: 12vh;
-        font-family: "circularA", sans-serif;
-        color: #fff;
-        font-size: 5rem;
-        font-weight: 300;
-        text-align: center;
-        text-transform: uppercase;
-    }
 }

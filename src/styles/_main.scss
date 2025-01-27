@@ -366,7 +366,7 @@ a {
   }
 }
 
-/* Header */
+/* main */
 @include keyframes("header") {
   0% {
     @include vendor("transform", "translate3d(0,1em,0)");
@@ -415,7 +415,7 @@ a {
     font-family: "circularA", sans-serif;
   }
 
-  nav {
+  .main-menu {
     margin: 1.5em 0 0 0;
 
     li.list {
@@ -458,19 +458,14 @@ a {
         border: solid 1px _palette(fg);
         display: block;
         font-size: _size(nav-icon);
-        height: 2.5em;
-        line-height: 2.5em;
         position: relative;
         text-align: center;
         top: 0;
-        width: 2.5em;
       }
 
       &:hover {
-        &:before {
-          background-color: _palette(nav-icon, hover-bg);
-          color: _palette(nav-icon, hover-fg);
-        }
+        background-color: aliceblue;
+        color: #111;
       }
 
       &:active {
@@ -555,7 +550,7 @@ a {
       font-size: 1em;
     }
 
-    nav {
+    .main-menu {
       font-size: 1em;
 
       a {
@@ -581,7 +576,7 @@ a {
   /* Header */
 
   #main-header {
-    nav {
+    .main-menu {
       padding: 0 1em;
     }
   }

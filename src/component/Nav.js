@@ -1,25 +1,38 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-/**components */
-import Logo from './Logo';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { slide as Menu } from 'react-burger-menu';
+import { IoMenuOutline } from "react-icons/io5";
+import { ReactComponent as IconJ } from '../img/svg/J.svg';
 
-export default function Nav({ showNav }) {
+export default function Nav() {
+    const [showNav, setShowNav] = useState(false);
     const menuItems = ['portfolio', 'about', 'contact'];
 
-    return (
-        <header className={`nav-wrapper ${showNav ? 'show' : ''}`}>
-            <Logo />
+    const toggleNav = () => setShowNav(!showNav);
 
-            <nav className="nav">
-                <ul className="menu">
+    return (
+        <header className="nav-wrapper">
+            <Link to="/" className="logo">
+                <IconJ className="icon-j" />
+            </Link>
+
+            <nav className='navigation'>
+                <ul>
                     {menuItems.map((item, index) => (
-                        <li key={index} className="menu-item">
-                            <Link to={`/${item}`} smooth={true} duration={500}>{item}</Link>
-                        </li>
+                        <Link key={index} to={`/${item}`} >
+                            <li>{item} </li>
+                        </Link>
                     ))}
                 </ul>
-            </nav>
-        </header>
-    )
-}
 
+                <Menu right className={`hamburger-menu ${showNav ? 'show' : ''}`} customBurgerIcon={<IoMenuOutline />}>
+                    {menuItems.map((item, index) => (
+                        <Link to={`/${item}`} smooth={true} duration={500}>
+                            {item}
+                        </Link>
+                    ))}
+                </Menu>
+            </nav>
+        </header >
+    );
+}

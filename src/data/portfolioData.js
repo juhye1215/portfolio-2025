@@ -4,6 +4,7 @@ const portfolioData = () => [
     {
         id: 0,
         layout: 'web',
+        category: 'web',
         title: 'UX Career',
         type: "Pearson Career Site development",
         date: "2022",
@@ -96,30 +97,8 @@ const portfolioData = () => [
         image: media.Pplus.images,
         description: 'I developed the Pearson+ mobile application prototype using React Native, enabling seamless functionality on both iOS and Android platforms. The app provides an enhanced user experience for accessing educational content, offering features such as interactive learning tools, offline access, and personalized recommendations.',
     },
-    {
-        id: 7,
-        layout: 'mobile',
-        category: 'app',
-        title: 'P+ mobile app',
-        type: "App develop with ios & android",
-        date: "2024",
-        link: 'https://www.pearson.com/en-us/pearsonplus/mobile-app.html',
-        video: media.Pplus.video,
-        image: media.Pplus.images,
-        description: 'I developed the Pearson+ mobile application prototype using React Native, enabling seamless functionality on both iOS and Android platforms. The app provides an enhanced user experience for accessing educational content, offering features such as interactive learning tools, offline access, and personalized recommendations.',
-    },
-    {
-        id: 7,
-        layout: 'mobile',
-        category: 'app',
-        title: 'P+ mobile app',
-        type: "App develop with ios & android",
-        date: "2024",
-        link: 'https://www.pearson.com/en-us/pearsonplus/mobile-app.html',
-        video: media.Pplus.video,
-        image: media.Pplus.images,
-        description: 'I developed the Pearson+ mobile application prototype using React Native, enabling seamless functionality on both iOS and Android platforms. The app provides an enhanced user experience for accessing educational content, offering features such as interactive learning tools, offline access, and personalized recommendations.',
-    },
+
+
 ];
 
 export default portfolioData;

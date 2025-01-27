@@ -258,7 +258,7 @@ a:hover {
   backface-visibility: hidden;
   transform: translate3d(0,0,0);
   /* Set your background with this */
-  background: #29383b url("/src//img/bg/night-river.jpg") bottom left;
+  background: #29383b url("/src//img/bg/night-river2.png") bottom left;
   background-repeat: repeat-x;
   width: -moz-fit-content;
   width: fit-content;
@@ -323,7 +323,7 @@ a:hover {
   width: 1px;
 }
 
-/* Header */
+/* main */
 @keyframes header {
   0% {
     transform: translate3d(0,1em,0);
@@ -369,10 +369,10 @@ a:hover {
   opacity: 0.75;
   font-family: "circularA", sans-serif;
 }
-#main-header nav {
+#main-header .main-menu {
   margin: 1.5em 0 0 0;
 }
-#main-header nav li.list {
+#main-header .main-menu li.list {
   animation: nav-icons 0.5s ease-in-out forwards;
   backface-visibility: hidden;
   transform: translate3d(0,0,0);
@@ -386,41 +386,41 @@ a:hover {
   top: 0;
   width: 5.35em;
 }
-#main-header nav li.list svg {
+#main-header .main-menu li.list svg {
   width: 2.675em;
   height: 2.675em;
 }
-#main-header nav li.list:nth-child(1) {
+#main-header .main-menu li.list:nth-child(1) {
   animation-delay: 2.5s;
 }
-#main-header nav li.list:nth-child(2) {
+#main-header .main-menu li.list:nth-child(2) {
   animation-delay: 2.75s;
 }
-#main-header nav li.list:nth-child(3) {
+#main-header .main-menu li.list:nth-child(3) {
   animation-delay: 3s;
 }
-#main-header nav li.list:nth-child(4) {
+#main-header .main-menu li.list:nth-child(4) {
   animation-delay: 3.25s;
 }
-#main-header nav li.list:nth-child(5) {
+#main-header .main-menu li.list:nth-child(5) {
   animation-delay: 3.5s;
 }
-#main-header nav li.list:nth-child(6) {
+#main-header .main-menu li.list:nth-child(6) {
   animation-delay: 3.75s;
 }
-#main-header nav li.list:nth-child(7) {
+#main-header .main-menu li.list:nth-child(7) {
   animation-delay: 4s;
 }
-#main-header nav li.list:nth-child(8) {
+#main-header .main-menu li.list:nth-child(8) {
   animation-delay: 4.25s;
 }
-#main-header nav li.list:nth-child(9) {
+#main-header .main-menu li.list:nth-child(9) {
   animation-delay: 4.5s;
 }
-#main-header nav li.list:nth-child(10) {
+#main-header .main-menu li.list:nth-child(10) {
   animation-delay: 4.75s;
 }
-#main-header nav a {
+#main-header .main-menu a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   border: 0;
@@ -430,32 +430,29 @@ a:hover {
   margin: 0 1rem;
   box-sizing: border-box;
 }
-#main-header nav a:before {
+#main-header .main-menu a:before {
   transition: all 0.2s ease-in-out;
   border-radius: 100%;
   border: solid 1px #fff;
   display: block;
   font-size: 1.75em;
-  height: 2.5em;
-  line-height: 2.5em;
   position: relative;
   text-align: center;
   top: 0;
-  width: 2.5em;
 }
-#main-header nav a:hover:before {
-  background-color: rgba(255, 255, 255, 0.175);
-  color: #fff;
+#main-header .main-menu a:hover {
+  background-color: aliceblue;
+  color: #111;
 }
-#main-header nav a:active {
+#main-header .main-menu a:active {
   font-size: 0.95em;
   background: none;
 }
-#main-header nav a:active:before {
+#main-header .main-menu a:active:before {
   background-color: rgba(255, 255, 255, 0.35);
   color: #fff;
 }
-#main-header nav a span {
+#main-header .main-menu a span {
   display: none;
 }
 
@@ -537,13 +534,13 @@ a:hover {
   #main-header p {
     font-size: 1em;
   }
-  #main-header nav {
+  #main-header .main-menu {
     font-size: 1em;
   }
-  #main-header nav a:hover {
+  #main-header .main-menu a:hover {
     font-size: 1em;
   }
-  #main-header nav a:active {
+  #main-header .main-menu a:active {
     font-size: 1em;
   }
 }
@@ -563,7 +560,7 @@ a:hover {
     width: 1237.5px;
   }
   /* Header */
-  #main-header nav {
+  #main-header .main-menu {
     padding: 0 1em;
   }
 }
@@ -684,25 +681,6 @@ ul.job-title li {
   padding: 50px;
 }
 
-.back-button-container {
-  position: absolute;
-  top: 10vh;
-  left: 1rem;
-  cursor: pointer;
-  margin: 1rem 3rem;
-}
-@media (max-width: 768px) {
-  .back-button-container {
-    margin: 1rem 0.25rem;
-  }
-}
-.back-button-container svg {
-  color: white;
-  width: 2.5rem;
-  height: 2.5rem;
-  cursor: pointer;
-}
-
 /* Define breakpoints as variables */
 .nav-wrapper {
   position: fixed;
@@ -712,8 +690,8 @@ ul.job-title li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 6.25rem;
   padding: 0 4rem;
+  height: 80px;
   z-index: 99;
   opacity: 1;
   transition: transform 3s ease-in-out;
@@ -722,71 +700,98 @@ ul.job-title li {
 @media (max-width: 768px) {
   .nav-wrapper {
     padding: 0.85rem 1em;
+    height: 60px;
   }
-}
-.nav-wrapper.show {
-  animation: fadeInOpacity 1.5s ease-in-out forwards;
 }
 
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .logo {
   flex: 1;
   display: flex;
   align-items: baseline;
 }
-.logo img {
-  max-width: 150px;
+.logo h1 {
+  font-size: 3.125rem;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1em;
 }
 .logo .icon-j {
   fill: rgb(255, 158, 188);
 }
-.logo .circle-svg {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-}
 .logo svg {
-  display: inline-block;
   vertical-align: middle;
   width: auto;
-  height: 1.75rem;
-  margin: 0 2px;
+  height: 1.875rem;
 }
 
-.nav {
-  flex: 2;
+/* 메뉴 스타일 */
+.navigation ul {
   display: flex;
-  justify-content: flex-end;
-}
-.nav .menu {
+  flex-direction: row;
   list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+  flex-direction: row;
 }
-.nav .menu .menu-item {
-  margin-right: 1.25rem;
+.navigation ul li {
+  font-family: "circularA", sans-serif;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
 }
-.nav .menu .menu-item a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 500;
+
+/* 햄버거 메뉴 */
+.hamburger-menu {
+  display: none;
+  top: 60px;
+  background-color: #05112a;
+  padding: 1rem 0;
+}
+.hamburger-menu a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1rem 1rem 1rem 2.5rem;
+  text-transform: capitalize;
+}
+
+.bm-burger-button {
+  display: none;
+  position: fixed;
+  width: 2.25rem;
+  height: 2.25rem;
+  right: 1rem;
+  top: 10px;
+}
+
+@media (max-width: 768px) {
+  .navigation ul {
+    display: none;
+  }
+  .hamburger-menu,
+  .bm-burger-button {
+    display: block;
+  }
+}
+main.page {
+  padding: 8rem 4rem 4rem 4rem;
+}
+@media (max-width: 768px) {
+  main.page {
+    padding: 8rem 1em 1rem 1rem;
+  }
+}
+main.page h1.page-title {
+  font-family: "circularA", sans-serif;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-align: center;
   text-transform: uppercase;
-  padding: 0 1.125rem;
 }
-.nav .menu .menu-item a:hover {
-  color: #007bff;
+main.page .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .portfolio-container {
@@ -795,39 +800,11 @@ ul.job-title li {
   max-width: 1440px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
-  .portfolio-container {
-    padding: 0 1rem;
-  }
-}
-.portfolio-container h1.page-title {
-  margin-top: 12vh;
-  font-family: "circularA", sans-serif;
-  color: #fff;
-  font-size: 5rem;
-  font-weight: 300;
-  text-align: center;
-  text-transform: uppercase;
-}
 
-main.portfolio-detail-container {
+.portfolio-detail-container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-}
-main.portfolio-detail-container h1.title {
-  margin-top: 10vh;
-  font-family: "circularA", sans-serif;
-  color: #fff;
-  font-size: 4vw;
-  font-weight: 300;
-  text-align: center;
-  text-transform: uppercase;
-}
-@media (max-width: 768px) {
-  main.portfolio-detail-container h1.title {
-    font-size: 2.5rem;
-  }
 }
 
 .content-layout {
@@ -1020,68 +997,108 @@ main.portfolio-detail-container h1.title {
   color: black;
 }
 
-/* card-container의 기본 스타일 */
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  max-width: 1280px;
-  /* 스크롤바 스타일 */
+.card-wrapper {
+  padding: 1.5rem 0;
+  margin: 2.5rem 0;
 }
-.card-container::-webkit-scrollbar {
-  height: 4px; /* 가로 스크롤바 높이 */
-}
-.card-container::-webkit-scrollbar-thumb {
-  background: pink; /* 스크롤바 색상 */
-  border-radius: 10px; /* 둥근 모서리 */
-}
-.card-container::-webkit-scrollbar-track {
-  background: transparent; /* 트랙 배경 색상 */
+.card-wrapper h2 {
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
 }
 @media (max-width: 768px) {
-  .card-container {
-    justify-content: start;
+  .card-wrapper h2 {
+    font-size: 2rem;
+    line-height: 1.5;
   }
 }
+.card-wrapper .line {
+  height: 1px;
+  background-color: rgba(232, 238, 250, 0.4);
+  margin: 2rem 0;
+}
 
-/* card의 기본 스타일 */
 .card {
-  max-width: 25rem;
+  max-width: 37.5rem;
+  padding: 0.75rem;
   height: auto;
-  max-height: 500px;
   flex-shrink: 0;
   background-color: transparent;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 768px) {
+  .card {
+    width: 22.5rem;
+    margin-right: 0.25rem;
+  }
+  .card.mobile, .card.tablet {
+    width: 12.5rem;
+  }
+}
+.card.mobile img {
+  aspect-ratio: 9/19;
+  border-radius: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 768px) {
+  .card.mobile img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 400px;
+  }
+}
+.card.tablet img {
+  aspect-ratio: 3/4;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .card.tablet img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 400px;
+  }
 }
 .card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 .card img {
+  aspect-ratio: 16/9;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
   transition: transform 0.3s ease;
   width: 100%;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 768px) {
+  .card img {
+    height: auto;
+  }
 }
 .card .card-text {
-  padding: 0.5rem 0;
+  padding-top: 0.75rem;
   text-align: left;
 }
 .card .card-text p {
   text-transform: capitalize;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.back-button-container {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.back-button-container svg {
+  color: white;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

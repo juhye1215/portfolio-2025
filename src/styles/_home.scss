@@ -126,20 +126,3 @@ ul.job-title {
     }
 }
 
-.back-button-container {
-    position: absolute;
-    top: 10vh;
-    left: 1rem;
-
-    cursor: pointer;
-    margin: 1rem 3rem;
-    @media (max-width: $tablet) {
-        margin: 1rem 0.25rem;
-    }
-    svg {
-        color: white;
-        width: 2.5rem;
-        height: 2.5rem;
-        cursor: pointer;
-    }
-}
