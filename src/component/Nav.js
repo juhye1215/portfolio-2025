@@ -6,13 +6,13 @@ import { ReactComponent as IconJ } from '../img/svg/J.svg';
 
 export default function Nav() {
     const [showNav, setShowNav] = useState(false);
-    const menuItems = ['portfolio', 'about', 'contact'];
+    const menuItems = ['home', 'portfolio', 'about', 'contact'];
 
     const toggleNav = () => setShowNav(!showNav);
 
     return (
         <header className="nav-wrapper">
-            <Link to="/" className="logo">
+            <Link to="/home" className="logo">
                 <IconJ className="icon-j" />
             </Link>
 

@@ -22,13 +22,13 @@ export default function Portfolio() {
             <main className='page'>
                 <div className='row'>
                     <BackButton to="/" />
-                    <h1 className="page-title">projects</h1>
+                    <h1 className="page-title">Dev projects</h1>
                     <div></div>
                 </div>
 
                 <div className="portfolio-container">
                     <section className='card-wrapper'>
-                        <h2>mobile app Development</h2>
+                        <h2>mobile app </h2>
                         <div className='line'></div>
                         <ScrollMenu>
                             {filterItemsByCategory('app').map((item) => (
@@ -44,7 +44,7 @@ export default function Portfolio() {
                     </section>
 
                     <section className='card-wrapper'>
-                        <h2>Web Development</h2>
+                        <h2>Web </h2>
                         <div className='line'></div>
                         <ScrollMenu>
                             {filterItemsByCategory('web').map((item) => (
@@ -59,7 +59,7 @@ export default function Portfolio() {
                     </section>
 
                     <section className='card-wrapper'>
-                        <h2>design System Development</h2>
+                        <h2>design System </h2>
                         <div className='line'></div>
                         <ScrollMenu>
                             {filterItemsByCategory('design system').map((item) => (
@@ -74,7 +74,7 @@ export default function Portfolio() {
                     </section>
 
                     <section className='card-wrapper'>
-                        <h2>navigation Development</h2>
+                        <h2>navigation </h2>
                         <div className='line'></div>
                         <ScrollMenu>
                             {filterItemsByCategory('navigation').map((item) => (

@@ -25,20 +25,9 @@ const portfolioData = () => [
         image: media.StyleDictionary.images,
         description: 'I utilized Style Dictionary to establish a comprehensive design system and create reusable components in Storybook. By leveraging Style Dictionary powerful tools, I was able to define design tokens as Css, JavaScript format include colors, typography, and spacing, ensuring consistency across all components. Storybook served as a platform to develop and showcase these components interactively, enabling efficient collaboration and seamless integration with development workflows.',
     },
+
     {
         id: 2,
-        layout: 'tablet',
-        category: 'app',
-        title: 'eReader Tablet App ',
-        type: "P+ Tablet App Navigation Development",
-        date: "2024",
-        link: '',
-        video: media.eReader.video,
-        image: media.eReader.images,
-        description: 'The application leverages the larger screen size of tablets, offering a layout that maximizes usability and functionality. This is developed using React Native, the app supports both iOS and Android tablets, ensuring consistency and performance across platforms. Designed specifically to enhance user navigation. The app focuses on providing a seamless and intuitive navigation experience tailored for tablet users.',
-    },
-    {
-        id: 3,
         layout: 'web',
         category: 'web',
         title: 'Pearson Recruiter bundles ',
@@ -50,7 +39,7 @@ const portfolioData = () => [
         description: 'As part of the company rebranding initiative, I developed and implemented an intuitive dashboard for both recruiters and job applicants. The recruiter dashboard provides real-time insights into candidate applications, allowing recruiters to assess candidates abilities, track the hiring process, and send assessment invitations. Recruiters can invite candidates to take assessments, and applicants can immediately begin their evaluations once they receive the invitation link. Although the recruiter and applicant dashboards are distinct, they are seamlessly connected, ensuring a smooth and efficient workflow between both parties. This dual dashboard system was designed to streamline the recruitment process and enhance the overall hiring experience',
     },
     {
-        id: 4,
+        id: 3,
         layout: 'web',
         category: 'navigation',
         title: 'P+ Navigation ',
@@ -62,7 +51,7 @@ const portfolioData = () => [
         description: 'As part of the P+ project, I developed a dynamic global navigation system that adapts based on the users authentication status. The navigation renders differently when the user is logged in versus when logged out, providing a tailored experience for each scenario. Additionally, the navigation system was designed with a user-centric approach, allowing for easy integration of images, making the structure both visually appealing and user-friendly.',
     },
     {
-        id: 5,
+        id: 4,
         layout: 'mobile',
         category: 'app',
         title: 'ELL Learning app ',
@@ -74,7 +63,7 @@ const portfolioData = () => [
         description: 'I developed an ELL mobile application designed to help users improve their English skills interactively. The React-based app allows users to listen to English questions, solve them, and instantly view their results for immediate feedback. The app was built with cross-platform functionality, ensuring seamless operation on both iOS and Android devices. This project demonstrates my ability to create intuitive and responsive applications that enhance the learning experience for users across multiple operating systems.',
     },
     {
-        id: 6,
+        id: 5,
         layout: 'web',
         category: 'design system',
         title: 'Nemo Design System',
@@ -86,7 +75,7 @@ const portfolioData = () => [
         description: 'In this project, I developed a comprehensive design system all styled using design tokens. The system is integrated with Storybook, allowing for interactive component development and documentation. Utilizing Chromatic, I implemented automated visual testing to ensure UI consistency and catch potential regressions. The components are built with TypeScript and are designed to be compatible with both React and Angular frameworks. The project also includes automated testing and deployment pipelines, streamlining the development process and ensuring high-quality, maintainable code.',
     },
     {
-        id: 7,
+        id: 6,
         layout: 'mobile',
         category: 'app',
         title: 'P+ mobile app',
@@ -97,8 +86,18 @@ const portfolioData = () => [
         image: media.Pplus.images,
         description: 'I developed the Pearson+ mobile application prototype using React Native, enabling seamless functionality on both iOS and Android platforms. The app provides an enhanced user experience for accessing educational content, offering features such as interactive learning tools, offline access, and personalized recommendations.',
     },
-
-
+    {
+        id: 7,
+        layout: 'tablet',
+        category: 'app',
+        title: 'eReader Tablet App ',
+        type: "P+ Tablet App Navigation Development",
+        date: "2024",
+        link: '',
+        video: media.eReader.video,
+        image: media.eReader.images,
+        description: 'The application leverages the larger screen size of tablets, offering a layout that maximizes usability and functionality. This is developed using React Native, the app supports both iOS and Android tablets, ensuring consistency and performance across platforms. Designed specifically to enhance user navigation. The app focuses on providing a seamless and intuitive navigation experience tailored for tablet users.',
+    },
 ];
 
 export default portfolioData;

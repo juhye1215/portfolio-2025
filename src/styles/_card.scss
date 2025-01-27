@@ -3,7 +3,7 @@
     margin: 2.5rem 0;
 
     h2 {
-        color: #fff;
+        color: #01cbb7;
         font-size: 1.875rem;
         font-weight: 700;
         text-align: left;
@@ -32,8 +32,7 @@
     @media (max-width: $tablet) {
         width: 22.5rem;
         margin-right: 0.25rem;
-        &.mobile,
-        &.tablet {
+        &.mobile {
             width: 12.5rem;
         }
     }
