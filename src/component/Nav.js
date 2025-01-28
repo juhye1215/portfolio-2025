@@ -12,7 +12,7 @@ export default function Nav() {
 
     return (
         <header className="nav-wrapper">
-            <Link to="/home" className="logo">
+            <Link to="/" className="logo">
                 <IconJ className="icon-j" />
             </Link>
 
