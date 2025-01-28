@@ -29,38 +29,17 @@ export default function PortfolioDetail() {
         <>
             <Nav />
             <div className="bg-wrapper">
-
                 <div className="row">
                     <BackButton to="/portfolio" />
                 </div>
 
-                <div className={`portfolio-detail-container`}>
-                    {/* Video Background */}
-                    <div className={`video-background ${layout}`}>
-
-                        {video && (
-                            <video
-                                src={video}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className={`video overlay ${layout}`}
-                            />
-                        )}
-
-                        <div className={`text-container ${layout}`}>
-                            <h1 className="title">{title}</h1>
-                            <div className="subtitle">
-                                <h4>{type}</h4>
-                                <h4>{date}</h4>
-                            </div>
-                            <p>{description}</p>
-
-                            {link ? (<LinkButton link={link} label="View Site" />) : null}
-
-                        </div>
-                    </div>
+                <div className="video-background">
+                    {video && (
+                        <video
+                            src={video} autoPlay loop muted playsInline
+                            className={`video overlay ${layout}`}
+                        />
+                    )}
                 </div>
             </div>
 
@@ -70,8 +49,19 @@ export default function PortfolioDetail() {
                 </svg>
             </div>
 
-            {/* Screenshot Images */}
-            <section className='bottom-wrapper'>
+            <section className="bottom-wrapper">
+
+                <div className={`text-container ${layout}`}>
+                    <h1 className="title">{title}</h1>
+                    <div className="subtitle">
+                        <h4>{type}</h4>
+                        <h4>{date}</h4>
+                    </div>
+                    <p>{description}</p>
+                    {link ? (<LinkButton link={link} label="View Site" />) : null}
+                </div>
+
+
                 <div className={`screenshot-container ${layout}`}>
                     {image.map((img, index) => (
                         <img
@@ -86,17 +76,21 @@ export default function PortfolioDetail() {
                     ))}
                 </div>
             </section>
+
+
             {/* Modal */}
-            {isModalOpen && (
-                <div className="modal-overlay" onClick={closeModal}>
-                    <div className={`modal-content ${layout}`} onClick={(e) => e.stopPropagation()}>
-                        <button className="close-button" onClick={closeModal}>
-                            <IoClose />
-                        </button>
-                        {modalContent}
+            {
+                isModalOpen && (
+                    <div className="modal-overlay" onClick={closeModal}>
+                        <div className={`modal-content ${layout}`} onClick={(e) => e.stopPropagation()}>
+                            <button className="close-button" onClick={closeModal}>
+                                <IoClose />
+                            </button>
+                            {modalContent}
+                        </div>
                     </div>
-                </div>
-            )}
+                )
+            }
 
         </>
     );

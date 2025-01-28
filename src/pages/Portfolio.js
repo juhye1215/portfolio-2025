@@ -20,6 +20,7 @@ export default function Portfolio() {
         <>
             <Nav />
             <main className='page'>
+                
                 <div className='row'>
                     <BackButton to="/" />
                     <h1 className="page-title">Dev projects</h1>

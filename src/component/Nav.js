@@ -5,8 +5,14 @@ import { IoMenuOutline } from "react-icons/io5";
 import { ReactComponent as IconJ } from '../img/svg/J.svg';
 
 export default function Nav() {
+
     const [showNav, setShowNav] = useState(false);
-    const menuItems = ['home', 'portfolio', 'about', 'contact'];
+    const menuItems = [
+        { title: "home", link: "/" },
+        { title: "portfolio", link: "/portfolio" },
+        { title: "about", link: "/about" },
+        { title: "contact", link: "/contact" }
+    ];
 
     const toggleNav = () => setShowNav(!showNav);
 
@@ -19,16 +25,16 @@ export default function Nav() {
             <nav className='navigation'>
                 <ul>
                     {menuItems.map((item, index) => (
-                        <Link key={index} to={`/${item}`} >
-                            <li>{item} </li>
-                        </Link>
+                        <li key={index}>
+                            <Link to={item.link}>{item.title}</Link>
+                        </li>
                     ))}
                 </ul>
 
                 <Menu right className={`hamburger-menu ${showNav ? 'show' : ''}`} customBurgerIcon={<IoMenuOutline />}>
                     {menuItems.map((item, index) => (
-                        <Link to={`/${item}`} smooth={true} duration={500}>
-                            {item}
+                        <Link to={`/${item.link}`} smooth={true} duration={500}>
+                            {item.title}
                         </Link>
                     ))}
                 </Menu>

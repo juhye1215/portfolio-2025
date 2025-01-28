@@ -1,8 +1,5 @@
 main.page {
-    padding: 4rem 4rem 4rem 4rem;
-    @media (max-width: $tablet) {
-        padding: 4rem 1em 1rem 1rem;
-    }
+    padding: 2rem 0;
 
     h1.page-title {
         font-family: "circularA", sans-serif;
@@ -16,11 +13,16 @@ main.page {
             font-size: 2.5rem;
         }
     }
-    .row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    @media (max-width: $tablet) {
+        padding: 0 0.875rem;
     }
 }
 
@@ -29,4 +31,7 @@ main.page {
     height: auto;
     max-width: 1440px;
     margin: 0 auto;
+    @media (max-width: $tablet) {
+        padding: 0 1rem;
+    }
 }

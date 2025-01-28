@@ -1,9 +1,5 @@
-import React, { useState, useRef, useEffect, } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
-
-/*component*/
-import Nav from '../component/Nav';
-import Card from '../component/Card';
 
 /**icons */
 import { BsLaptop } from "react-icons/bs";

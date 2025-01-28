@@ -18,6 +18,7 @@ import recruiter2 from '../img/work/screenshot/recruiter2.png';
 import candidate from '../img/work/screenshot/candidate0.png';
 import candidate1 from '../img/work/screenshot/candidate1.png';
 import candidate2 from '../img/work/screenshot/candidate2.png';
+import recruiterCode from '../img/work/screenshot/mirage-code.png';
 import recruiterVideo from '../img/work/video/recruiter.mp4';
 
 import Pauth2 from '../img/work/screenshot/P+nav2.png';
@@ -59,7 +60,7 @@ export const media = {
         video: eReaderVideo,
     },
     Recruiter: {
-        images: [recruiter0, recruiter1, recruiter2, candidate, candidate1, candidate2],
+        images: [recruiter0, recruiter1, recruiter2, candidate, candidate1, candidate2, recruiterCode],
         video: recruiterVideo,
     },
     Pauth: {
@@ -75,7 +76,7 @@ export const media = {
         video: NemoVideo,
     },
     Pplus: {
-        images: [Pplus1, Pplus2, Pplus3, Pplus4, PplusCode],
+        images: [Pplus1, Pplus2, Pplus3, Pplus4],
         video: PplusVideo,
     },
 };

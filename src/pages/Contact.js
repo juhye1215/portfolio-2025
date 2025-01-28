@@ -1,0 +1,10 @@
+import React from 'react'
+
+export default function Contact(props) {
+
+
+    return (
+        <><h1>this page coming soon</h1>
+        </>
+    )
+}
