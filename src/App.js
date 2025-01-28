@@ -4,11 +4,12 @@ import Portfolio from './pages/Portfolio';
 import PortfolioDetail from "./pages/PortfolioDetail";
 import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
+import ScrollTop from './function/ScrollTop';
 
 function App() {
   return (
     <>
-
+      <ScrollTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />

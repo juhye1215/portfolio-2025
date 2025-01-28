@@ -9,9 +9,9 @@ import { GoMail } from "react-icons/go";
 export default function Home() {
 
     const Links = [
-        { icon: <BsLaptop />, label: "portfolio", href: "/portfolio" },
-        { icon: <MdPerson2 />, label: "about", href: "/about" },
-        { icon: <GoMail />, label: "contact", href: "/contact" },
+        { icon: <BsLaptop />, label: "portfolio", href: "portfolio" },
+        { icon: <MdPerson2 />, label: "about me", href: "about" },
+        { icon: <GoMail />, label: "contact", href: "contact" },
 
     ];
 
@@ -28,7 +28,9 @@ export default function Home() {
                         <div className='main-menu'>
                             <ul>
                                 {Links.map((link, index) => (
-                                    <Link key={index} to={link.href} class="icon brands ">
+                                    <Link key={index}
+                                        to={`${process.env.PUBLIC_URL}/${link.href}`}
+                                        class="icon brands ">
                                         <li className='list'> {link.icon}
                                             <span className="label">{link.label}</span>
                                         </li>

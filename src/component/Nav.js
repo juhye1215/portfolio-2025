@@ -9,9 +9,9 @@ export default function Nav() {
     const [showNav, setShowNav] = useState(false);
     const menuItems = [
         { title: "home", link: "/" },
-        { title: "portfolio", link: "/portfolio" },
-        { title: "about me", link: "/about" },
-        { title: "contact", link: "/contact" }
+        { title: "portfolio", link: "portfolio" },
+        { title: "about me", link: "about" },
+        { title: "contact", link: "contact" }
     ];
 
     const toggleNav = () => setShowNav(!showNav);
@@ -26,14 +26,17 @@ export default function Nav() {
                 <ul>
                     {menuItems.map((item, index) => (
                         <li key={index}>
-                            <Link to={item.link}>{item.title}</Link>
+                            <Link to={`${process.env.PUBLIC_URL}/${item.link}`}>{item.title}</Link>
                         </li>
                     ))}
                 </ul>
 
                 <Menu right className={`hamburger-menu ${showNav ? 'show' : ''}`} customBurgerIcon={<IoMenuOutline />}>
                     {menuItems.map((item, index) => (
-                        <Link key={index} to={item.link} smooth={true} duration={500}>
+                        <Link key={index}
+                            to={`${process.env.PUBLIC_URL}/${item.link}`}
+                            smooth={true}
+                            duration={500}>
                             {item.title}
                         </Link>
                     ))}

@@ -20,7 +20,7 @@ export default function Portfolio() {
         <>
             <Nav />
             <main className='page'>
-                
+
                 <div className='row'>
                     <BackButton to="/" />
                     <h1 className="page-title">Dev projects</h1>
@@ -38,7 +38,7 @@ export default function Portfolio() {
                                     image={item.image[1]}
                                     title={item.title}
                                     layout={item.layout}
-                                    link={`/portfolio/${item.id}`}
+                                    link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
                                 />
                             ))}
                         </ScrollMenu>
@@ -53,7 +53,7 @@ export default function Portfolio() {
                                     key={item.id}
                                     image={item.image[1]}
                                     title={item.title}
-                                    link={`/portfolio/${item.id}`}
+                                    link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
                                 />
                             ))}
                         </ScrollMenu>
@@ -68,7 +68,7 @@ export default function Portfolio() {
                                     key={item.id}
                                     image={item.image[2]}
                                     title={item.title}
-                                    link={`/portfolio/${item.id}`}
+                                    link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
                                 />
                             ))}
                         </ScrollMenu>
@@ -83,7 +83,7 @@ export default function Portfolio() {
                                     key={item.id}
                                     image={item.image[0]}
                                     title={item.title}
-                                    link={`/portfolio/${item.id}`}
+                                    link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
                                 />
                             ))}
                         </ScrollMenu>
