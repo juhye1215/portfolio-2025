@@ -40,6 +40,7 @@ export default function PortfolioDetail() {
                             className={`video overlay ${layout}`}
                         />
                     )}
+                    <div className="video-overlay"></div>
                 </div>
             </div>
 
@@ -49,7 +50,7 @@ export default function PortfolioDetail() {
                 </svg>
             </div>
 
-            <section className="bottom-wrapper">
+            <section className={`bottom-wrapper ${layout}`}>
 
                 <div className={`text-container ${layout}`}>
                     <h1 className="title">{title}</h1>

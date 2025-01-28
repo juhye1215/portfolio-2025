@@ -10,7 +10,7 @@ export default function Nav() {
     const menuItems = [
         { title: "home", link: "/" },
         { title: "portfolio", link: "/portfolio" },
-        { title: "about", link: "/about" },
+        { title: "about me", link: "/about" },
         { title: "contact", link: "/contact" }
     ];
 
@@ -33,7 +33,7 @@ export default function Nav() {
 
                 <Menu right className={`hamburger-menu ${showNav ? 'show' : ''}`} customBurgerIcon={<IoMenuOutline />}>
                     {menuItems.map((item, index) => (
-                        <Link to={`/${item.link}`} smooth={true} duration={500}>
+                        <Link key={index} to={item.link} smooth={true} duration={500}>
                             {item.title}
                         </Link>
                     ))}

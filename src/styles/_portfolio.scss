@@ -9,7 +9,7 @@ main.page {
         font-weight: 400;
         text-align: center;
         text-transform: uppercase;
-        @media (max-width: $tablet) {
+        @media (max-width: $tablet-lg) {
             font-size: 2.5rem;
         }
     }
@@ -21,7 +21,7 @@ main.page {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-lg) {
         padding: 0 0.875rem;
     }
 }
@@ -31,7 +31,7 @@ main.page {
     height: auto;
     max-width: 1440px;
     margin: 0 auto;
-    @media (max-width: $tablet) {
+    @media (max-width: $tablet-lg) {
         padding: 0 1rem;
     }
 }

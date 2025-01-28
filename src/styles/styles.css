@@ -581,7 +581,7 @@ a:hover {
   background: #05112A;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .nav-wrapper {
     padding: 0.85rem;
     height: 60px;
@@ -647,7 +647,7 @@ a:hover {
   top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navigation ul {
     display: none;
   }
@@ -668,7 +668,7 @@ main.page h1.page-title {
   text-align: center;
   text-transform: uppercase;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   main.page h1.page-title {
     font-size: 2.5rem;
   }
@@ -681,7 +681,7 @@ main.page h1.page-title {
   align-items: center;
   padding: 0 2rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .row {
     padding: 0 0.875rem;
   }
@@ -693,7 +693,7 @@ main.page h1.page-title {
   max-width: 1440px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .portfolio-container {
     padding: 0 1rem;
   }
@@ -707,31 +707,29 @@ main.page h1.page-title {
 .video-background {
   position: relative;
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .video-background {
-    height: 40vh;
+    height: 50vh;
   }
 }
 
 video {
   position: absolute;
   height: inherit;
-  overflow: hidden;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
-  border-radius: 0.5rem;
-  z-index: 1;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   video {
     top: 0;
     left: 0;
@@ -747,12 +745,17 @@ video.tablet {
   aspect-ratio: 3/4;
   border-radius: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   video.tablet {
     max-width: 25rem;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+@media (max-width: 480px) {
+  video.tablet {
+    max-width: 18rem;
   }
 }
 video.mobile {
@@ -762,57 +765,71 @@ video.mobile {
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   video.mobile {
-    max-width: 17rem;
+    max-width: 18rem;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
   }
 }
 @media (max-width: 480px) {
   video.mobile {
-    max-width: 15rem;
+    max-width: 12.5rem;
   }
 }
 
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+  pointer-events: none;
+}
+
 .bottom-wrapper {
+  position: relative;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  z-index: 9;
+  margin-top: -10vh;
+  z-index: 2;
+}
+@media (max-width: 1024px) {
+  .bottom-wrapper.mobile, .bottom-wrapper.tablet {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .bottom-wrapper {
+    margin-top: -15vh;
+  }
 }
 .bottom-wrapper .text-container {
   width: 100%;
-  margin-top: -15vh;
   color: #fff;
   text-align: left;
-  padding: 0 5rem;
+  padding: 0 2.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .bottom-wrapper .text-container {
-    bottom: 0;
-    padding: 0 1rem;
-  }
-  .bottom-wrapper .text-container.mobile, .bottom-wrapper .text-container.tablet {
-    margin-top: 5rem;
+    padding: 0 1.5rem;
   }
 }
 .bottom-wrapper .text-container h1.title {
+  color: #01cbb7;
   font-family: "circularA", sans-serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1.2;
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .bottom-wrapper .text-container h1.title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 .bottom-wrapper .text-container .subtitle {
@@ -821,13 +838,13 @@ video.mobile {
   justify-content: space-between;
   text-transform: capitalize;
   margin-bottom: 1rem;
-  font-size: 1.85rem;
+  font-size: 1.875rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #01cbb7;
 }
 @media (max-width: 480px) {
   .bottom-wrapper .text-container .subtitle {
+    font-size: 1.5rem;
     flex-direction: column;
   }
 }
@@ -842,12 +859,8 @@ video.mobile {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  margin: 5rem 0 3rem 0;
-}
-@media (max-width: 768px) {
-  .bottom-wrapper .screenshot-container.mobile, .bottom-wrapper .screenshot-container.tablet {
-    margin-top: 5rem;
-  }
+  margin: 3rem 0;
+  padding: 0 1rem;
 }
 .bottom-wrapper .screenshot-container img {
   width: 22.5%;
@@ -858,7 +871,7 @@ video.mobile {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .bottom-wrapper .screenshot-container img {
     width: 30%;
   }
@@ -901,7 +914,7 @@ video.mobile {
 
 .modal-content {
   position: relative;
-  background-color: white;
+  background: #000000;
   border-radius: 16px;
   padding: 3rem 1rem 1rem 1rem;
   max-width: 90%;
@@ -931,7 +944,7 @@ video.mobile {
 .close-button svg {
   width: 100%;
   height: 100%;
-  color: black;
+  color: #fff;
 }
 
 .card-wrapper {
@@ -945,7 +958,7 @@ video.mobile {
   text-align: left;
   text-transform: capitalize;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card-wrapper h2 {
     font-size: 2rem;
     line-height: 1.5;
@@ -966,7 +979,7 @@ video.mobile {
   margin-right: 1rem;
   border-radius: 0.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card {
     width: 22.5rem;
     margin-right: 0.25rem;
@@ -981,7 +994,7 @@ video.mobile {
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card.mobile img {
     -o-object-fit: cover;
        object-fit: cover;
@@ -992,7 +1005,7 @@ video.mobile {
   aspect-ratio: 3/4;
   border-radius: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card.tablet img {
     -o-object-fit: cover;
        object-fit: cover;
@@ -1012,7 +1025,7 @@ video.mobile {
   width: 100%;
   border-radius: 0.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card img {
     height: auto;
   }
@@ -1056,7 +1069,6 @@ video.mobile {
   cursor: pointer;
   text-transform: capitalize;
   transition: background-color 0.3s ease;
-  float: right;
 }
 .link-button:hover {
   background-color: #048d80;
@@ -1071,6 +1083,11 @@ video.mobile {
   flex-direction: column;
   gap: 1rem;
 }
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 0 1rem;
+  }
+}
 .about-container h1 {
   font-size: 3.5rem;
   line-height: 1.1;
@@ -1083,7 +1100,6 @@ video.mobile {
   color: #01cbb7;
   font-size: 2rem;
   margin: 2rem 0;
-  text-transform: capitalize;
 }
 .about-container .box {
   display: flex;
@@ -1095,7 +1111,7 @@ video.mobile {
   width: 50%;
   max-width: 400px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about-container .box img {
     width: 60;
   }

@@ -16,8 +16,8 @@ export default function AboutMe(props) {
 
                 <div className="about-container">
 
-                    <h1>I'm Frontend Developer</h1>
-                    <h2> Also called UX Engineer, Design Technologist</h2>
+                    <h1>Frontend Developer</h1>
+                    <h2> Also being called as UX Engineer, Design Technologist</h2>
 
                     <div className='box right'>
                         <img src={mockup} alt="mockup" />
