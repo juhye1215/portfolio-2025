@@ -8,7 +8,7 @@ export default function Nav() {
 
     const [showNav, setShowNav] = useState(false);
     const menuItems = [
-        { title: "home", link: "/" },
+        { title: "home", link: "" },
         { title: "portfolio", link: "portfolio" },
         { title: "about me", link: "about" },
         { title: "contact", link: "contact" }

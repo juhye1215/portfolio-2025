@@ -13,11 +13,11 @@
     z-index: 99;
     opacity: 1;
     transition: transform $transition-duration ease-in-out;
-    background:  #05112A;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    background-color: #05112a;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 
     @media (max-width: $tablet-lg) {
-        padding: 0.85rem ;
+        padding: 0.85rem;
         height: 60px;
     }
 }

@@ -172,7 +172,7 @@ html {
 }
 
 body {
-  background-color: #13142b;
+  background-color: #05112a;
 }
 body.is-preload {
   overflow: hidden;
@@ -258,7 +258,7 @@ a:hover {
   backface-visibility: hidden;
   transform: translate3d(0,0,0);
   /* Set your background with this */
-  background: #13142b url("/src//img/bg/snow-mt1.png") bottom left;
+  background: #05112a url("/src//img/bg/snow-mt1.png") bottom left;
   background-repeat: repeat-x;
   width: -moz-fit-content;
   width: fit-content;
@@ -578,8 +578,8 @@ a:hover {
   z-index: 99;
   opacity: 1;
   transition: transform 3s ease-in-out;
-  background: #05112A;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  background-color: #05112a;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 1024px) {
   .nav-wrapper {
@@ -660,11 +660,10 @@ main.page {
   padding: 2rem 0;
 }
 main.page h1.page-title {
-  font-family: "circularA", sans-serif;
   color: #fff;
   font-size: 3.5rem;
-  line-height: 1.2;
-  font-weight: 400;
+  line-height: 1.1;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
 }
@@ -1081,66 +1080,95 @@ video.mobile {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
 }
 @media (max-width: 1024px) {
   .about-container {
     padding: 0 1rem;
+    gap: 1.5rem;
   }
-}
-.about-container h1 {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  font-style: normal;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 1rem;
 }
 .about-container h2 {
   color: #01cbb7;
   font-size: 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
+  line-height: 1.1;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .about-container h2 {
+    font-size: 1.5rem;
+  }
 }
 .about-container .box {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3rem;
 }
 .about-container .box img {
   z-index: 1;
   width: 50%;
   max-width: 400px;
 }
-@media (max-width: 1024px) {
-  .about-container .box img {
-    width: 60;
-  }
-}
 .about-container .box .text-box {
   z-index: 0;
-  background-color: #222222;
+  background-color: #0d1c38;
   border-radius: 0.5rem;
   padding: 3rem;
-  margin-top: -3rem;
-  width: 75%;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
+  margin-top: -5%;
+  width: 80%;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about-container .box .text-box {
     width: 100%;
+    padding: 1.5rem;
   }
 }
-.about-container .box .text-box p {
+.about-container .box .text-box h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+.about-container .box .text-box h3 p {
+  margin: 1.5rem 0;
   font-size: 1.25rem;
   font-family: "circularA", sans-serif;
 }
-.about-container .box.right {
+.about-container .box.list-1 {
   align-items: flex-end;
   justify-content: flex-start;
 }
-.about-container .box.left {
+.about-container .box.list-1 h3 {
+  color: #ae90ff;
+}
+.about-container .box.list-2 {
   text-align: right;
+}
+@media (max-width: 1024px) {
+  .about-container .box.list-2 {
+    text-align: left;
+  }
+}
+.about-container .box.list-2 img {
+  max-width: 300px;
+  margin-bottom: -15%;
+}
+.about-container .box.list-2 h3 {
+  color: #f4d97b;
+}
+.about-container .box.list-2 p {
+  text-align: left;
+  max-width: 70%;
+  float: right;
+}
+@media (max-width: 1024px) {
+  .about-container .box.list-2 p {
+    max-width: 100%;
+  }
+}
+.about-container .box.list-3 {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.about-container .box.list-3 h3 {
+  color: #01cbb7;
 }/*# sourceMappingURL=styles.css.map */

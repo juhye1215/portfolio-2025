@@ -1,40 +1,37 @@
 import React from 'react';
-import mockup from '../img/bg/pplus.avif';
 /*component*/
 import Nav from '../component/Nav';
 import BackButton from '../component/BackButton';
-export default function AboutMe(props) {
+/**data */
+import aboutMeData from '../data/aboutMeData';
 
 
+export default function AboutMe() {
     return (
         <>
             <Nav />
             <main className='page'>
                 <div className='row'>
                     <BackButton to="/" />
+                    <h1 className='page-title'>Frontend Engineer</h1>
+                    <div></div>
                 </div>
 
                 <div className="about-container">
+                    <h2>Also being called UX Engineer or Design Technologist</h2>
 
-                    <h1>Frontend Developer</h1>
-                    <h2> Also being called as UX Engineer, Design Technologist</h2>
-
-                    <div className='box right'>
-                        <img src={mockup} alt="mockup" />
-                        <div className='text-box'>
-                            <p>5 years of professional developing mobile app and web app</p>
+                    {aboutMeData.map((item, i) => (
+                        <div key={item.id} className={`box list-${i + 1}`}>
+                            <img src={item.img} alt="about me images" />
+                            <div className="text-box">
+                                <h3>{item.title}</h3>
+                                <p>{item.description}</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className='box left'>
-                        <img src={mockup} alt="mockup" />
-                        <div className='text-box'>
-                            <p>5 years of professional developing mobile app and web app</p>
-                        </div>
-                    </div>
-
+                    ))}
                 </div>
-            </main>
+
+            </main >
         </>
     )
 }

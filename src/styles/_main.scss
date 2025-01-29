@@ -221,8 +221,8 @@ html {
 }
 
 body {
-  background-color: #13142b;
-  // Stops initial animations until page loads.
+  background-color: #05112a;
+  //background-color: #13142b;
   &.is-preload {
     overflow: hidden;
     *,
