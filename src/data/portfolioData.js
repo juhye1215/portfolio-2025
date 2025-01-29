@@ -98,6 +98,18 @@ const portfolioData = () => [
         image: media.eReader.images,
         description: 'The application leverages the larger screen size of tablets, offering a layout that maximizes usability and functionality. This is developed using React Native, the app supports both iOS and Android tablets, ensuring consistency and performance across platforms. Designed specifically to enhance user navigation. The app focuses on providing a seamless and intuitive navigation experience tailored for tablet users.',
     },
+    {
+        id: 8,
+        layout: 'web',
+        category: 'web',
+        title: 'Pearson Checkout flow ',
+        type: "Bundle package flow ",
+        date: "2024",
+        link: 'https://www.pearson.com/en-us/higher-education.html',
+        video: media.Mlm.video,
+        image: media.Mlm.images,
+        description: 'Developed a prototype of an intuitive and efficient checkout flow for educational bundles, specifically tailored for web users. This project aimed to enhance the user experience and drive conversions for Pearson e-commerce platform. By leveraging React, we achieved a cross-platform solution that meets the demands of modern learners',
+    },
 ];
 
 export default portfolioData;

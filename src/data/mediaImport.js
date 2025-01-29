@@ -27,7 +27,7 @@ import Pauth4 from '../img/work/screenshot/P+nav4.png';
 import PauthCode from '../img/work/screenshot/Pauth-code.png';
 import PauthVideo from '../img/work/video/P+Auth.mp4';
 
-import Nautilus1 from '../img/work/screenshot/nautilus.png';
+import Nautilus1 from '../img/work/screenshot/nautilus0.png';
 import Nautilus2 from '../img/work/screenshot/nautilus1.png';
 import Nautilus3 from '../img/work/screenshot/nautilus2.png';
 import Nautilus4 from '../img/work/screenshot/nautilus3.png'
@@ -43,8 +43,15 @@ import Pplus1 from '../img/work/screenshot/pplus1.png';
 import Pplus2 from '../img/work/screenshot/pplus2.png';
 import Pplus3 from '../img/work/screenshot/pplus3.png';
 import Pplus4 from '../img/work/screenshot/pplus4.png';
-import PplusCode from '../img/work/screenshot/pplus-code.png';
+import Pplus5 from '../img/work/screenshot/pplus5.png';
 import PplusVideo from '../img/work/video/pplus-app-video.mp4';
+
+import mlm1 from '../img/work/screenshot/mlm0.png';
+import mlm2 from '../img/work/screenshot/mlm1.png';
+import mlm3 from '../img/work/screenshot/mlm2.png';
+import mlm4 from '../img/work/screenshot/mlm3.png';
+import mlmCode from '../img/work/screenshot/mlm-code.png';
+import mlmVideo from '../img/work/video/mlm-video.mp4';
 
 export const media = {
     UXCareer: {
@@ -76,7 +83,11 @@ export const media = {
         video: NemoVideo,
     },
     Pplus: {
-        images: [Pplus1, Pplus2, Pplus3, Pplus4],
+        images: [Pplus1, Pplus2, Pplus3, Pplus4, Pplus5],
         video: PplusVideo,
+    },
+    Mlm: {
+        images: [mlm2, mlm1, mlm3, mlm4, mlmCode],
+        video: mlmVideo,
     },
 };

@@ -713,11 +713,6 @@ main.page h1.page-title {
   justify-content: center;
   overflow: hidden;
 }
-@media (max-width: 1024px) {
-  .video-background {
-    height: 50vh;
-  }
-}
 
 video {
   position: absolute;
@@ -758,7 +753,7 @@ video.tablet {
   }
 }
 video.mobile {
-  max-width: 22.5rem;
+  max-width: 22rem;
   height: auto;
   border-radius: 60px;
   -o-object-fit: contain;
@@ -766,7 +761,7 @@ video.mobile {
 }
 @media (max-width: 1024px) {
   video.mobile {
-    max-width: 18rem;
+    max-width: 16rem;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -774,7 +769,7 @@ video.mobile {
 }
 @media (max-width: 480px) {
   video.mobile {
-    max-width: 12.5rem;
+    max-width: 13.5rem;
   }
 }
 
@@ -787,13 +782,16 @@ video.mobile {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
   pointer-events: none;
 }
+.video-overlay.mobile {
+  display: none;
+}
 
 .bottom-wrapper {
   position: relative;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  margin-top: -10vh;
+  margin-top: -20vh;
   z-index: 2;
 }
 @media (max-width: 1024px) {
@@ -801,9 +799,9 @@ video.mobile {
     margin-top: 0;
   }
 }
-@media (max-width: 1024px) {
-  .bottom-wrapper {
-    margin-top: -15vh;
+@media (max-width: 480px) {
+  .bottom-wrapper.mobile, .bottom-wrapper.tablet {
+    margin-top: -5vh;
   }
 }
 .bottom-wrapper .text-container {
@@ -890,11 +888,6 @@ video.mobile {
 .bottom-wrapper .screenshot-container img.mobile {
   max-width: 15rem;
   aspect-ratio: 9/19;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
 }
 
 /* modal*/
@@ -926,10 +919,6 @@ video.mobile {
   border-radius: 16px;
   max-width: 100%;
   max-height: 80vh;
-}
-.modal-content.mobile img,
-.modal-content.mobile video {
-  border-radius: 80px;
 }
 
 .close-button {
@@ -970,13 +959,18 @@ video.mobile {
 }
 
 .card {
-  max-width: 37.5rem;
+  width: 37.5rem;
   padding: 0.75rem;
   height: auto;
-  flex-shrink: 0;
   background-color: transparent;
   margin-right: 1rem;
   border-radius: 0.5rem;
+}
+.card.mobile {
+  width: 18.75rem;
+}
+.card.tablet {
+  width: 22.5rem;
 }
 @media (max-width: 1024px) {
   .card {
@@ -1060,7 +1054,6 @@ video.mobile {
 
 .link-button {
   border-radius: 40px;
-  background: #01cbb7;
   padding: 0.5rem 2rem;
   color: #333;
   font-size: 1rem;
@@ -1068,9 +1061,6 @@ video.mobile {
   cursor: pointer;
   text-transform: capitalize;
   transition: background-color 0.3s ease;
-}
-.link-button:hover {
-  background-color: #048d80;
 }
 
 .about-container {
@@ -1205,6 +1195,13 @@ video.mobile {
 .banner-container .banner-text h1 {
   font-size: 2.5rem;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .banner-container .banner-text h1 {
+    color: #fff !important;
+  }
 }
 .banner-container .banner-text .subtitle {
   font-size: 24px;

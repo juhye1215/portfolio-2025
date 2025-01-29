@@ -11,10 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    @media (max-width: $tablet-lg) {
-        height: 50vh;
-    }
+    overflow: hidden; 
 }
 
 video {
@@ -49,18 +46,18 @@ video {
         }
     }
     &.mobile {
-        max-width: 22.5rem;
+        max-width: 22rem;
         height: auto;
         border-radius: 60px;
         object-fit: contain;
         @media (max-width: $tablet-lg) {
-            max-width: 18rem;
+            max-width: 16rem;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
         }
         @media (max-width: $mobile-lg) {
-            max-width: 12.5rem;
+            max-width: 13.5rem;
         }
     }
 }
@@ -73,6 +70,9 @@ video {
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
     pointer-events: none;
+    &.mobile {
+        display: none;
+    }
 }
 
 .bottom-wrapper {
@@ -80,7 +80,7 @@ video {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    margin-top: -10vh;
+    margin-top: -20vh;
     z-index: 2;
     @media (max-width: $tablet-lg) {
         &.mobile,
@@ -88,9 +88,13 @@ video {
             margin-top: 0;
         }
     }
-    @media (max-width: $tablet-lg) {
-        margin-top: -15vh;
+    @media (max-width: $mobile-lg) {
+        &.mobile,
+        &.tablet {
+            margin-top: -5vh;
+        }
     }
+
     .text-container {
         width: 100%;
         color: #fff;
@@ -166,11 +170,6 @@ video {
             &.mobile {
                 max-width: 15rem;
                 aspect-ratio: 9/19;
-                border-radius: 40px;
-                -webkit-border-radius: 40px;
-                -moz-border-radius: 40px;
-                -ms-border-radius: 40px;
-                -o-border-radius: 40px;
             }
         }
     }
@@ -204,12 +203,6 @@ video {
         border-radius: 16px;
         max-width: 100%;
         max-height: 80vh;
-    }
-    &.mobile {
-        img,
-        video {
-            border-radius: 80px;
-        }
     }
 }
 

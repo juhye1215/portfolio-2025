@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import portfolioData from "../data/portfolioData";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
-
 import "react-horizontal-scrolling-menu/dist/styles.css";
 
 /*component*/

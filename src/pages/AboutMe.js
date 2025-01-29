@@ -18,7 +18,7 @@ export default function AboutMe() {
                 </div>
 
                 <div className="about-container">
-                    <h2>Also being called UX Engineer or Design Technologist</h2>
+                    <h2> UX Engineer &nbsp;&bull;&nbsp;  Design Technologist</h2>
 
                     {aboutMeData.map((item, i) => (
                         <div key={item.id} className={`box list-${i + 1}`}>

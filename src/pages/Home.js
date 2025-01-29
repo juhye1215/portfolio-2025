@@ -30,7 +30,7 @@ export default function Home() {
                                 {Links.map((link, index) => (
                                     <Link key={index}
                                         to={`${process.env.PUBLIC_URL}/${link.href}`}
-                                        class="icon brands ">
+                                        className="icon brands ">
                                         <li className='list'> {link.icon}
                                             <span className="label">{link.label}</span>
                                         </li>

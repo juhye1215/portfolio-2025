@@ -1,15 +1,18 @@
 import React from 'react'
 import LinkButton from './LinkButton';
 
-export default function Banner({ color1, color2, title, link }) {
+export default function Banner({ color1, color2, title, link, icon }) {
     return (
         <div className="banner-container">
             <div className="banner-text">
-                <h1 style={{ color: color2 }}>{title}</h1>
+                <h1 style={{ color: color2 }}>
+                    {icon} &nbsp;&nbsp;{title}
+                </h1>
                 <h3 className='subtitle'>Let's connect through {title}</h3>
-                <p>Let’s build something great together! Connect with me on LinkedIn to discuss ideas, opportunities, and collaborations.</p>
-                <LinkButton link={link} label={`Go ${title}`} />
+                <p>Let’s build something great together! Connect with me on {title} to discuss ideas, opportunities, and collaborations.</p>
+                <LinkButton link={link} label={`Go ${title}`} color={color2} />
             </div>
+
 
             <div className="banner-images">
 

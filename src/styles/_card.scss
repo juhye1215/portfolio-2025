@@ -21,14 +21,18 @@
 }
 
 .card {
-    max-width: 37.5rem;
+    width: 37.5rem;
     padding: 0.75rem;
     height: auto;
-    flex-shrink: 0;
     background-color: transparent;
     margin-right: 1rem;
     border-radius: 0.5rem;
-
+    &.mobile {
+        width: 18.75rem;
+    }
+    &.tablet {
+        width: 22.5rem;
+    }
     @media (max-width: $tablet-lg) {
         width: 22.5rem;
         margin-right: 0.25rem;

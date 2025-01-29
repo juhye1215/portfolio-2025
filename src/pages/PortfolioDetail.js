@@ -37,16 +37,16 @@ export default function PortfolioDetail() {
                     {video && (
                         <video
                             src={video} autoPlay loop muted playsInline
-                            className={`video overlay ${layout}`}
+                            className={`video ${layout}`}
                         />
                     )}
-                    <div className="video-overlay"></div>
+                    <div className={`video-overlay ${layout}`}></div>
                 </div>
             </div>
 
-            <div class="custom-shape-divider-bottom-1738013340">
+            <div className="custom-shape-divider-bottom-1738013340">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" className="shape-fill"></path>
                 </svg>
             </div>
 
@@ -59,7 +59,7 @@ export default function PortfolioDetail() {
                         <h4>{date}</h4>
                     </div>
                     <p>{description}</p>
-                    {link ? (<LinkButton link={link} label="View Site" />) : null}
+                    {link ? (<LinkButton link={link} color="#01cbb7" label="View Site" />) : null}
                 </div>
 
 

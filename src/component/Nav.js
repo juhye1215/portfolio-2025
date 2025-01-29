@@ -35,7 +35,6 @@ export default function Nav() {
                     {menuItems.map((item, index) => (
                         <Link key={index}
                             to={`${process.env.PUBLIC_URL}/${item.link}`}
-                            smooth={true}
                             duration={500}>
                             {item.title}
                         </Link>

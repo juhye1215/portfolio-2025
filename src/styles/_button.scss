@@ -17,7 +17,6 @@
 
 .link-button {
     border-radius: 40px;
-    background: #01cbb7;
     padding: 0.5rem 2rem;
     color: #333;
     font-size: 1rem;
@@ -25,8 +24,4 @@
     cursor: pointer;
     text-transform: capitalize;
     transition: background-color 0.3s ease;
-
-    &:hover {
-        background-color: #048d80;
-    }
 }
