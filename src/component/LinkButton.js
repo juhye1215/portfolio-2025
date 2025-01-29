@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LinkButton({ link, label }) {
+export default function LinkButton({ link, label}) {
 
     return (
         <button

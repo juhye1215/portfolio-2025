@@ -1,0 +1,81 @@
+.banner-container {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+    min-height: 400px;
+    padding: 3rem;
+    background-color: #0d1c38;
+    overflow: hidden;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+
+    .banner-text {
+        z-index: 2;
+        vertical-align: middle;
+        text-align: left;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .subtitle {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin: 1.25rem 0;
+        }
+        p {
+            color: #989ba3;
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            @media (max-width: $tablet) {
+                color: #0d1c38;
+            }
+        }
+    }
+
+    .banner-images {
+        //position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        @media (max-width: $tablet) {
+            width: 0%;
+        }
+    }
+
+    .svg1,
+    .svg2,
+    .svg3 {
+        position: absolute;
+        z-index: 1;
+        opacity: 0.9; /* 자연스럽게 보이도록 */
+    }
+
+    .svg1 {
+        bottom: 40%;
+        left: 50%;
+        transform: rotate(10deg);
+    }
+
+    /* SVG 2 - 오른쪽 정렬 후 왼쪽으로 살짝 이동 */
+    .svg2 {
+        right: -20%;
+    }
+
+    .svg3 {
+    }
+}
