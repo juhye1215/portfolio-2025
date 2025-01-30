@@ -35,3 +35,22 @@ main.page {
     }
 }
 
+.react-horizontal-scrolling-menu--scroll-container {
+    &::-webkit-scrollbar {
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(37, 52, 84, 0.8);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

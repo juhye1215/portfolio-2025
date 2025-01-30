@@ -1,12 +1,14 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react'
 import portfolioData from "../data/portfolioData";
-import { ScrollMenu } from "react-horizontal-scrolling-menu";
-import "react-horizontal-scrolling-menu/dist/styles.css";
-
+import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+import 'react-horizontal-scrolling-menu/dist/styles.css';
+/**swipe function */
+import { useSwipe } from '../function/useSwipe';
+import { onWheel } from '../function/onWheel';
 /*component*/
 import Nav from '../component/Nav';
-import Card from '../component/Card';
 import BackButton from '../component/BackButton';
+import Card from '../component/Card';
 
 export default function Portfolio() {
 
@@ -14,6 +16,9 @@ export default function Portfolio() {
     /**filter */
     const filterItemsByCategory = (category) =>
         portfolioItems.filter((item) => item.category === category);
+
+    const ref = useRef(null);
+    const { onMouseDown, onMouseMove, onMouseUp } = useSwipe(ref);
 
     return (
         <>
@@ -30,7 +35,13 @@ export default function Portfolio() {
                     <section className='card-wrapper'>
                         <h2>mobile app </h2>
                         <div className='line'></div>
-                        <ScrollMenu>
+                        <ScrollMenu
+                            onWheel={onWheel}
+                            onMouseDown={onMouseDown}
+                            onMouseMove={onMouseMove}
+                            onMouseUp={() => onMouseUp(ref.current)}
+                            apiRef={ref}
+                        >
                             {filterItemsByCategory('app').map((item) => (
                                 <Card
                                     key={item.id}
@@ -46,7 +57,13 @@ export default function Portfolio() {
                     <section className='card-wrapper'>
                         <h2>Web </h2>
                         <div className='line'></div>
-                        <ScrollMenu>
+                        <ScrollMenu
+                            onWheel={onWheel}
+                            onMouseDown={onMouseDown}
+                            onMouseMove={onMouseMove}
+                            onMouseUp={() => onMouseUp(ref.current)}
+                            apiRef={ref}
+                        >
                             {filterItemsByCategory('web').map((item) => (
                                 <Card
                                     key={item.id}
@@ -61,7 +78,13 @@ export default function Portfolio() {
                     <section className='card-wrapper'>
                         <h2>design System </h2>
                         <div className='line'></div>
-                        <ScrollMenu>
+                        <ScrollMenu
+                            onWheel={onWheel}
+                            onMouseDown={onMouseDown}
+                            onMouseMove={onMouseMove}
+                            onMouseUp={() => onMouseUp(ref.current)}
+                            apiRef={ref}
+                        >
                             {filterItemsByCategory('design system').map((item) => (
                                 <Card
                                     key={item.id}
@@ -76,7 +99,13 @@ export default function Portfolio() {
                     <section className='card-wrapper'>
                         <h2>navigation </h2>
                         <div className='line'></div>
-                        <ScrollMenu>
+                        <ScrollMenu
+                            onWheel={onWheel}
+                            onMouseDown={onMouseDown}
+                            onMouseMove={onMouseMove}
+                            onMouseUp={() => onMouseUp(ref.current)}
+                            apiRef={ref}
+                        >
                             {filterItemsByCategory('navigation').map((item) => (
                                 <Card
                                     key={item.id}
@@ -92,4 +121,3 @@ export default function Portfolio() {
         </>
     );
 }
-

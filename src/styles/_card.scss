@@ -29,9 +29,15 @@
     border-radius: 0.5rem;
     &.mobile {
         width: 18.75rem;
+        .card-text {
+            text-align: center;
+        }
     }
     &.tablet {
         width: 22.5rem;
+        .card-text {
+            text-align: center;
+        }
     }
     @media (max-width: $tablet-lg) {
         width: 22.5rem;

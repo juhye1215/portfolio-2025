@@ -698,6 +698,24 @@ main.page h1.page-title {
   }
 }
 
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  background-color: transparent;
+}
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(37, 52, 84, 0.8);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
 .bg-wrapper {
   padding-top: 2rem;
   background: linear-gradient(to top, #000000, #0a0a17, #121225, #13142b);
@@ -969,8 +987,14 @@ video.mobile {
 .card.mobile {
   width: 18.75rem;
 }
+.card.mobile .card-text {
+  text-align: center;
+}
 .card.tablet {
   width: 22.5rem;
+}
+.card.tablet .card-text {
+  text-align: center;
 }
 @media (max-width: 1024px) {
   .card {
