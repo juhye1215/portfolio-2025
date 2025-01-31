@@ -27,29 +27,13 @@
     display: flex;
     align-items: baseline;
 
-    h1 {
-        font-size: 3.125rem;
-        font-weight: 900;
-        letter-spacing: -0.035em;
-        line-height: 1em;
-    }
-
-    .icon-j {
-        fill: rgb(255, 158, 188);
-    }
-    // .circle-svg {
-    //     width: 10px;
-    //     height: 10px;
-    //     margin: 0 5px;
-    // }
-    svg {
+    img {
         vertical-align: middle;
         width: auto;
-        height: 1.875rem;
+        height: 2.5rem;
     }
 }
 
-/* 메뉴 스타일 */
 .navigation {
     ul {
         display: flex;
@@ -66,7 +50,6 @@
     }
 }
 
-/* 햄버거 메뉴 */
 .hamburger-menu {
     display: none;
     top: 60px;
@@ -95,7 +78,6 @@
     .navigation ul {
         display: none;
     }
-
     .hamburger-menu,
     .bm-burger-button {
         display: block;

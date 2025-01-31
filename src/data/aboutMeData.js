@@ -1,4 +1,4 @@
-import phoneMockup from '../img/bg/pplus.avif';
+import Coding from '../img/bg/coding.png';
 import Me from '../img/bg/me.png';
 import travel from '../img/bg/travel.png';
 
@@ -6,7 +6,7 @@ const aboutMeData = [
     {
         id: 1,
         title: "Experience",
-        img: phoneMockup,
+        img: Coding,
         description:
             "With over a decade of professional experience, I have had the privilege of creating intuitive web and mobile applications and prototypes for a variety of industries. My focus has been on providing state of the art solution that provide maximum user experience while exceeding corporate expectation. These project have ranged from developing scalable design system to fine-tuning user experience.",
     },

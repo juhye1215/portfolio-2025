@@ -593,22 +593,12 @@ a:hover {
   display: flex;
   align-items: baseline;
 }
-.logo h1 {
-  font-size: 3.125rem;
-  font-weight: 900;
-  letter-spacing: -0.035em;
-  line-height: 1em;
-}
-.logo .icon-j {
-  fill: rgb(255, 158, 188);
-}
-.logo svg {
+.logo img {
   vertical-align: middle;
   width: auto;
-  height: 1.875rem;
+  height: 2.5rem;
 }
 
-/* 메뉴 스타일 */
 .navigation ul {
   display: flex;
   flex-direction: row;
@@ -623,7 +613,6 @@ a:hover {
   text-transform: capitalize;
 }
 
-/* 햄버거 메뉴 */
 .hamburger-menu {
   display: none;
   top: 60px;
@@ -663,7 +652,7 @@ main.page h1.page-title {
   color: #fff;
   font-size: 3.5rem;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   text-transform: uppercase;
 }
@@ -691,11 +680,30 @@ main.page h1.page-title {
   height: auto;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card-wrapper {
+  padding: 1.5rem 0;
+  margin: 2.5rem 0;
+}
+.card-wrapper h2 {
+  color: #01cbb7;
+  font-size: 1.875rem;
+  font-weight: 600;
+  text-align: left;
+  text-transform: capitalize;
 }
 @media (max-width: 1024px) {
-  .portfolio-container {
-    padding: 0 1rem;
+  .card-wrapper h2 {
+    font-size: 2rem;
+    line-height: 1.5;
   }
+}
+.card-wrapper .line {
+  height: 1px;
+  background-color: rgba(232, 238, 250, 0.4);
+  margin: 2rem 0;
 }
 
 .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
@@ -750,7 +758,7 @@ video {
   }
 }
 video.tablet {
-  max-width: 35rem;
+  max-width: 30rem;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -771,7 +779,7 @@ video.tablet {
   }
 }
 video.mobile {
-  max-width: 22rem;
+  max-width: 20rem;
   height: auto;
   border-radius: 60px;
   -o-object-fit: contain;
@@ -838,8 +846,8 @@ video.mobile {
   font-family: "circularA", sans-serif;
   font-size: 3rem;
   line-height: 1.2;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-weight: 500;
+  text-transform: capitalize;
   margin-bottom: 1rem;
 }
 @media (max-width: 1024px) {
@@ -854,7 +862,7 @@ video.mobile {
   text-transform: capitalize;
   margin-bottom: 1rem;
   font-size: 1.875rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.2;
 }
 @media (max-width: 480px) {
@@ -867,6 +875,7 @@ video.mobile {
   font-size: 1.25rem;
   line-height: 1.6;
   margin: 1rem 0;
+  color: #989ba3;
 }
 .bottom-wrapper .screenshot-container {
   display: flex;
@@ -1053,7 +1062,7 @@ video.mobile {
 }
 .card .card-text p {
   text-transform: capitalize;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: #fff;
   font-weight: 600;
 }

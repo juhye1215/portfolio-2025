@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import { IoMenuOutline } from "react-icons/io5";
-import { ReactComponent as IconJ } from '../img/svg/J.svg';
+import IconJ from '../img/svg/JJ.svg';
+
 
 export default function Nav() {
 
@@ -19,7 +20,8 @@ export default function Nav() {
     return (
         <header className="nav-wrapper">
             <Link to="/" className="logo">
-                <IconJ className="icon-j" />
+                <img src={IconJ} alt='logo-img' />
+                {/* <IconJ className="icon-j" /> */}
             </Link>
 
             <nav className='navigation'>

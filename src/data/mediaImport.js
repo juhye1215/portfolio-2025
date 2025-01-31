@@ -53,6 +53,12 @@ import mlm4 from '../img/work/screenshot/mlm3.png';
 import mlmCode from '../img/work/screenshot/mlm-code.png';
 import mlmVideo from '../img/work/video/mlm-video.mp4';
 
+import PcomNav1 from '../img/work/screenshot/pcom-nav0.png';
+import PcomNav2 from '../img/work/screenshot/pcom-nav1.png';
+import PcomNav3 from '../img/work/screenshot/pcom-nav2.png';
+import PcomNavCode from '../img/work/screenshot/pcom-code.png';
+import PcomNavVideo from '../img/work/video/pcom-nav-video.mp4';
+
 export const media = {
     UXCareer: {
         images: [UXcareer1, UXcareer2],
@@ -89,5 +95,9 @@ export const media = {
     Mlm: {
         images: [mlm2, mlm1, mlm3, mlm4, mlmCode],
         video: mlmVideo,
+    },
+    PcomNav: {
+        images: [PcomNav3, PcomNav2, PcomNav1, PcomNavCode],
+        video: PcomNavVideo,
     },
 };

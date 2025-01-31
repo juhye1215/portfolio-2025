@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 video {
@@ -30,7 +30,7 @@ video {
     }
 
     &.tablet {
-        max-width: 35rem;
+        max-width: 30rem;
         height: auto;
         object-fit: contain;
         aspect-ratio: 3/4;
@@ -46,7 +46,7 @@ video {
         }
     }
     &.mobile {
-        max-width: 22rem;
+        max-width: 20rem;
         height: auto;
         border-radius: 60px;
         object-fit: contain;
@@ -109,8 +109,8 @@ video {
             font-family: "circularA", sans-serif;
             font-size: 3rem;
             line-height: 1.2;
-            font-weight: 400;
-            text-transform: uppercase;
+            font-weight: 500;
+            text-transform: capitalize;
             margin-bottom: 1rem;
             @media (max-width: $tablet-lg) {
                 font-size: 2rem;
@@ -123,7 +123,7 @@ video {
             text-transform: capitalize;
             margin-bottom: 1rem;
             font-size: 1.875rem;
-            font-weight: 600;
+            font-weight: 400;
             line-height: 1.2;
             @media (max-width: $mobile-lg) {
                 font-size: 1.5rem;
@@ -134,6 +134,7 @@ video {
             font-size: 1.25rem;
             line-height: 1.6;
             margin: 1rem 0;
+            color: #989ba3;
         }
     }
 
