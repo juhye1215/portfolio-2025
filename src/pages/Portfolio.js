@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, {  useRef } from 'react'
 import portfolioData from "../data/portfolioData";
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import 'react-horizontal-scrolling-menu/dist/styles.css';
@@ -67,7 +67,7 @@ export default function Portfolio() {
                             {filterItemsByCategory('web').map((item) => (
                                 <Card
                                     key={item.id}
-                                    image={item.image[1]}
+                                    image={item.mockup}
                                     title={item.title}
                                     link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
                                 />
@@ -88,7 +88,7 @@ export default function Portfolio() {
                             {filterItemsByCategory('design system').map((item) => (
                                 <Card
                                     key={item.id}
-                                    image={item.image[2]}
+                                    image={item.mockup}
                                     title={item.title}
                                     link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
                                 />
@@ -109,7 +109,7 @@ export default function Portfolio() {
                             {filterItemsByCategory('navigation').map((item) => (
                                 <Card
                                     key={item.id}
-                                    image={item.image[0]}
+                                    image={item.mockup}
                                     title={item.title}
                                     link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
                                 />

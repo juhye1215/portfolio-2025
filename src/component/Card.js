@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
-import { media } from "../data/mediaImport";
 
 export default function Card({ image, title, link, layout }) {
 

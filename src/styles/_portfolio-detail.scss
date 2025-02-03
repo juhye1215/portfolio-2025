@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    &.mobile,
+    &.tablet {
+        overflow: visible;
+    }
 }
 
 video {
@@ -22,6 +26,7 @@ video {
     width: 100%;
     transform: translate(-50%, -50%);
     padding: 1rem;
+
     @media (max-width: $tablet-lg) {
         top: 0;
         left: 0;
@@ -30,34 +35,33 @@ video {
     }
 
     &.tablet {
-        max-width: 30rem;
+        max-width: 25rem;
         height: auto;
         object-fit: contain;
-        aspect-ratio: 3/4;
         border-radius: 60px;
         @media (max-width: $tablet-lg) {
-            max-width: 25rem;
+            max-width: 22rem;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
         }
         @media (max-width: $mobile-lg) {
-            max-width: 18rem;
+            max-width: 17rem;
         }
     }
     &.mobile {
-        max-width: 20rem;
+        max-width: 18.5rem;
         height: auto;
         border-radius: 60px;
         object-fit: contain;
         @media (max-width: $tablet-lg) {
-            max-width: 16rem;
+            max-width: 15rem;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
         }
         @media (max-width: $mobile-lg) {
-            max-width: 13.5rem;
+            max-width: 12rem;
         }
     }
 }
@@ -70,7 +74,7 @@ video {
     height: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
     pointer-events: none;
-    &.mobile {
+    &.mobile , &.tablet {
         display: none;
     }
 }

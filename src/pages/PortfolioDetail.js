@@ -33,7 +33,7 @@ export default function PortfolioDetail() {
                     <BackButton to="/portfolio" />
                 </div>
 
-                <div className="video-background">
+                <div className={`video-background ${layout}`}>
                     {video && (
                         <video
                             src={video} autoPlay loop muted playsInline

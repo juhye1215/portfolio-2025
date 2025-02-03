@@ -739,6 +739,9 @@ main.page h1.page-title {
   justify-content: center;
   overflow: hidden;
 }
+.video-background.mobile, .video-background.tablet {
+  overflow: visible;
+}
 
 video {
   position: absolute;
@@ -758,16 +761,15 @@ video {
   }
 }
 video.tablet {
-  max-width: 30rem;
+  max-width: 25rem;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
-  aspect-ratio: 3/4;
   border-radius: 60px;
 }
 @media (max-width: 1024px) {
   video.tablet {
-    max-width: 25rem;
+    max-width: 22rem;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -775,11 +777,11 @@ video.tablet {
 }
 @media (max-width: 480px) {
   video.tablet {
-    max-width: 18rem;
+    max-width: 17rem;
   }
 }
 video.mobile {
-  max-width: 20rem;
+  max-width: 18.5rem;
   height: auto;
   border-radius: 60px;
   -o-object-fit: contain;
@@ -787,7 +789,7 @@ video.mobile {
 }
 @media (max-width: 1024px) {
   video.mobile {
-    max-width: 16rem;
+    max-width: 15rem;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -795,7 +797,7 @@ video.mobile {
 }
 @media (max-width: 480px) {
   video.mobile {
-    max-width: 13.5rem;
+    max-width: 12rem;
   }
 }
 
@@ -808,7 +810,7 @@ video.mobile {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
   pointer-events: none;
 }
-.video-overlay.mobile {
+.video-overlay.mobile, .video-overlay.tablet {
   display: none;
 }
 
@@ -986,24 +988,20 @@ video.mobile {
 }
 
 .card {
-  width: 37.5rem;
+  width: 40rem;
   padding: 0.75rem;
   height: auto;
   background-color: transparent;
   margin-right: 1rem;
   border-radius: 0.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .card.mobile {
   width: 18.75rem;
 }
-.card.mobile .card-text {
-  text-align: center;
-}
 .card.tablet {
   width: 22.5rem;
-}
-.card.tablet .card-text {
-  text-align: center;
 }
 @media (max-width: 1024px) {
   .card {
@@ -1022,19 +1020,16 @@ video.mobile {
 }
 @media (max-width: 1024px) {
   .card.mobile img {
-    -o-object-fit: cover;
-       object-fit: cover;
     height: 400px;
   }
 }
 .card.tablet img {
-  aspect-ratio: 3/4;
-  border-radius: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 60px;
 }
 @media (max-width: 1024px) {
   .card.tablet img {
-    -o-object-fit: cover;
-       object-fit: cover;
     height: 400px;
   }
 }
@@ -1058,7 +1053,7 @@ video.mobile {
 }
 .card .card-text {
   padding-top: 0.75rem;
-  text-align: left;
+  text-align: center;
 }
 .card .card-text p {
   text-transform: capitalize;
