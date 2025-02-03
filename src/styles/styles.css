@@ -749,8 +749,9 @@ video {
   top: 50%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%, -50%);
   padding: 1rem;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out;
 }
 @media (max-width: 1024px) {
   video {
@@ -895,7 +896,7 @@ video.mobile {
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease-in-out;
 }
 @media (max-width: 1024px) {
   .bottom-wrapper .screenshot-container img {
@@ -990,12 +991,9 @@ video.mobile {
 .card {
   width: 40rem;
   padding: 0.75rem;
-  height: auto;
   background-color: transparent;
   margin-right: 1rem;
   border-radius: 0.5rem;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .card.mobile {
   width: 18.75rem;
@@ -1026,7 +1024,7 @@ video.mobile {
 .card.tablet img {
   -o-object-fit: contain;
      object-fit: contain;
-  border-radius: 60px;
+  border-radius: 70px;
 }
 @media (max-width: 1024px) {
   .card.tablet img {
@@ -1038,9 +1036,9 @@ video.mobile {
 }
 .card img {
   aspect-ratio: 16/9;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
   overflow: hidden;
   transition: transform 0.3s ease;
   width: 100%;

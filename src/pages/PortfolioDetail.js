@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useInView } from "react-intersection-observer";
 /** data */
 import portfolioData from '../data/portfolioData';
 /** icon */
@@ -17,6 +18,10 @@ export default function PortfolioDetail() {
     const portfolio = portfolioData().find((item) => item.id === Number(id));
     const { title, description, layout, type, date, link, video, image } = portfolio;
 
+    //lazy loading
+    const { ref, inView } = useInView({ triggerOnce: true });
+    const [isLoaded, setIsLoaded] = useState(false);
+
     const openModal = (content) => {
         setModalContent(content);
         setModalOpen(true);
@@ -33,11 +38,17 @@ export default function PortfolioDetail() {
                     <BackButton to="/portfolio" />
                 </div>
 
-                <div className={`video-background ${layout}`}>
-                    {video && (
+                <div ref={ref} className={`video-background ${layout}`}>
+                    {inView && video && (
                         <video
-                            src={video} autoPlay loop muted playsInline
+                            src={video}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            onLoadedData={() => setIsLoaded(true)}
                             className={`video ${layout}`}
+                            style={{ opacity: isLoaded ? 1 : 0, }}
                         />
                     )}
                     <div className={`video-overlay ${layout}`}></div>
@@ -63,13 +74,17 @@ export default function PortfolioDetail() {
                 </div>
 
 
-                <div className={`screenshot-container ${layout}`}>
+                <div className={`screenshot-container ${layout}`} ref={ref}>
                     {image.map((img, index) => (
                         <img
                             key={index}
-                            src={img}
+                            src={inView ? img : ""}
                             alt={`${title}-${index + 1}`}
                             className={layout}
+                            style={{
+                                opacity: isLoaded ? 1 : 0,
+                            }}
+                            onLoad={() => setIsLoaded(true)}
                             onClick={() =>
                                 openModal(<img src={img} alt={`${title}-${index + 1}`} />)
                             }

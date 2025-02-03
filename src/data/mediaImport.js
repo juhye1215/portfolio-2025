@@ -100,7 +100,7 @@ export const media = {
     },
     Nemo: {
         mockup: NemoMockup,
-        images: [NemoMockup, Nemo1, Nemo2, Nemo4, NemoCode],
+        images: [Nemo1, Nemo2, Nemo4, NemoCode],
         video: NemoVideo,
     },
     Pplus: {

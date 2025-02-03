@@ -23,11 +23,9 @@
 .card {
     width: 40rem;
     padding: 0.75rem;
-    height: auto;
     background-color: transparent;
     margin-right: 1rem;
     border-radius: 0.5rem;
-    object-fit: contain;
 
     &.mobile {
         width: 18.75rem;
@@ -53,7 +51,7 @@
     }
     &.tablet img {
         object-fit: contain;
-        border-radius: 60px;
+        border-radius: 70px;
         @media (max-width: $tablet-lg) {
             height: 400px;
         }
@@ -64,8 +62,8 @@
 
     img {
         aspect-ratio: 16/9;
-        height: 400px;
-        object-fit: cover;
+        height: 25rem;
+        object-fit: contain;
         overflow: hidden;
         transition: transform 0.3s ease;
         width: 100%;
