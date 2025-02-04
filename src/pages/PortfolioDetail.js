@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import portfolioData from '../data/portfolioData';
 /** icon */
 import { IoClose } from 'react-icons/io5';
+import Spinner from '../img/bg/Spinner.png';
 /*component*/
 import Nav from '../component/Nav';
 import BackButton from '../component/BackButton';
@@ -39,13 +40,16 @@ export default function PortfolioDetail() {
                 </div>
 
                 <div ref={ref} className={`video-background ${layout}`}>
+                    {!isLoaded && (
+                        <div className="spinner">
+                            <img src={Spinner} alt='spinner' />
+                        </div>
+                    )}
                     {inView && video && (
                         <video
                             src={video}
                             autoPlay
                             loop
-                            muted
-                            playsInline
                             onLoadedData={() => setIsLoaded(true)}
                             className={`video ${layout}`}
                             style={{ opacity: isLoaded ? 1 : 0, }}
