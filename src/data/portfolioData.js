@@ -129,6 +129,19 @@ const portfolioData = () => [
         image: media.PcomNav.images,
         description: 'I developed the global navigation system for Pearson.com, ensuring a dynamic and localized experience for users worldwide. The navigation adapts based on the users selected country, displaying region-specific links, content, and structure. Additionally, the navigation hierarchy is tailored to different user segments, such as higher education, professionals, and K-12 students, ensuring relevant content for each audience.To enhance usability across devices, I implemented a fully responsive design, allowing the navigation to seamlessly adjust based on browser size, ensuring an optimized experience on both desktop and mobile. This project highlights my expertise in dynamic UI rendering, localization strategies, and responsive web development to create a globally scalable navigation solution.',
     },
+    {
+        id: 10,
+        layout: 'web',
+        category: 'marketing',
+        title: ' Marketing site in the real estate industry',
+        type: "Ulana Ward Village",
+        date: "2021",
+        link: 'https://www.ulanawardvillage.com',
+        video: media.Ulana.video,
+        mockup: media.Ulana.mockup,
+        image: media.Ulana.images,
+        description: 'I developed a real estate marketing website using WordPress, designed to showcase properties with an intuitive and visually appealing interface. The platform provides potential buyers with detailed property listings, high-quality images, virtual tours, and interactive maps to enhance the user experience.To ensure seamless management, I implemented custom WordPress themes and plugins, allowing for easy content updates and property management. The site is fully responsive and SEO-optimized, ensuring high visibility across search engines and smooth functionality on both desktop and mobile devices.',
+    },
 ];
 
 export default portfolioData;

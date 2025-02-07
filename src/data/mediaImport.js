@@ -69,6 +69,12 @@ import PcomNav3 from '../img/work/screenshot/pcom-nav2.png';
 import PcomNavCode from '../img/work/screenshot/pcom-code.png';
 import PcomNavVideo from '../img/work/video/pcom-nav-video.mp4';
 
+import UlanaMockup from '../img/work/screenshot/ulana-mockup.png';
+import Ulana1 from '../img/work/screenshot/ulana1.png';
+import Ulana2 from '../img/work/screenshot/ulana2.png';
+import Ulana3 from '../img/work/screenshot/ulana3.png';
+import UlanaVideo from '../img/work/video/ulana-video.mp4';
+
 export const media = {
     UXCareer: {
         mockup: UXcareerMockup,
@@ -116,5 +122,10 @@ export const media = {
         mockup: PcomNavMockup,
         images: [PcomNav3, PcomNav2, PcomNav1, PcomNavCode],
         video: PcomNavVideo,
+    },
+    Ulana: {
+        mockup: UlanaMockup,
+        images: [Ulana1, Ulana2, Ulana3],
+        video: UlanaVideo,
     },
 };

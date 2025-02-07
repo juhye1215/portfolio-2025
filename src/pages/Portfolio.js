@@ -1,4 +1,4 @@
-import React, {  useRef } from 'react'
+import React, { useRef } from 'react'
 import portfolioData from "../data/portfolioData";
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import 'react-horizontal-scrolling-menu/dist/styles.css';
@@ -107,6 +107,27 @@ export default function Portfolio() {
                             apiRef={ref}
                         >
                             {filterItemsByCategory('navigation').map((item) => (
+                                <Card
+                                    key={item.id}
+                                    image={item.mockup}
+                                    title={item.title}
+                                    link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
+                                />
+                            ))}
+                        </ScrollMenu>
+                    </section>
+
+                    <section className='card-wrapper'>
+                        <h2>marketing </h2>
+                        <div className='line'></div>
+                        <ScrollMenu
+                            onWheel={onWheel}
+                            onMouseDown={onMouseDown}
+                            onMouseMove={onMouseMove}
+                            onMouseUp={() => onMouseUp(ref.current)}
+                            apiRef={ref}
+                        >
+                            {filterItemsByCategory('marketing').map((item) => (
                                 <Card
                                     key={item.id}
                                     image={item.mockup}
