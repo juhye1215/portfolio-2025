@@ -956,18 +956,19 @@ video.mobile {
 .modal-content {
   position: relative;
   background: #000000;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 3rem 1rem 1rem 1rem;
+  overflow: auto;
   max-width: 90%;
   max-width: 1440px;
   max-height: 90%;
-  overflow: auto;
 }
-.modal-content img,
-.modal-content video {
-  border-radius: 16px;
+.modal-content img {
+  border-radius: 8px;
   max-width: 100%;
-  max-height: 80vh;
+}
+.modal-content.mobile img, .modal-content.tablet img {
+  border-radius: 32px;
 }
 
 .close-button {

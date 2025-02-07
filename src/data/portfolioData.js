@@ -142,6 +142,19 @@ const portfolioData = () => [
         image: media.Ulana.images,
         description: 'I developed a real estate marketing website using WordPress, designed to showcase properties with an intuitive and visually appealing interface. The platform provides potential buyers with detailed property listings, high-quality images, virtual tours, and interactive maps to enhance the user experience.To ensure seamless management, I implemented custom WordPress themes and plugins, allowing for easy content updates and property management. The site is fully responsive and SEO-optimized, ensuring high visibility across search engines and smooth functionality on both desktop and mobile devices.',
     },
+    {
+        id: 11,
+        layout: 'web',
+        category: 'marketing',
+        title: ' Luxury Real Estate Marketing Website',
+        type: "The Park",
+        date: "2021",
+        link: 'https://www.theparkwardvillage.com',
+        video: media.Park.video,
+        mockup: media.Park.mockup,
+        image: media.Park.images,
+        description: 'I developed a high-end real estate marketing website using WordPress, designed to showcase premium properties with an elegant and modern user experience. The platform provides potential buyers with stunning property visuals, immersive virtual tours, and detailed descriptions to enhance engagement and drive conversions',
+    },
 ];
 
 export default portfolioData;

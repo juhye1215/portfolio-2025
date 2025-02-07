@@ -75,6 +75,13 @@ import Ulana2 from '../img/work/screenshot/ulana2.png';
 import Ulana3 from '../img/work/screenshot/ulana3.png';
 import UlanaVideo from '../img/work/video/ulana-video.mp4';
 
+import ParkMockup from '../img/work/screenshot/park-mockup.png';
+import Park1 from '../img/work/screenshot/park1.png';
+import Park2 from '../img/work/screenshot/park2.png';
+import Park3 from '../img/work/screenshot/park3.png';
+import ParkVideo from '../img/work/video/park-video.mp4';
+
+
 export const media = {
     UXCareer: {
         mockup: UXcareerMockup,
@@ -127,5 +134,10 @@ export const media = {
         mockup: UlanaMockup,
         images: [Ulana1, Ulana2, Ulana3],
         video: UlanaVideo,
+    },
+    Park: {
+        mockup: ParkMockup,
+        images: [Park1, Park2, Park3],
+        video: ParkVideo,
     },
 };

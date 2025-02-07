@@ -102,7 +102,7 @@ export default function PortfolioDetail() {
             {
                 isModalOpen && (
                     <div className="modal-overlay" onClick={closeModal}>
-                        <div className={`modal-content ${layout}`} onClick={(e) => e.stopPropagation()}>
+                        <div className={`modal-content ${layout}`}>
                             <button className="close-button" onClick={closeModal}>
                                 <IoClose />
                             </button>
