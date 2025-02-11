@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useInView } from "react-intersection-observer";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism';
 /** data */
 import portfolioData from '../data/portfolioData';
 /** icon */
@@ -17,7 +19,7 @@ export default function PortfolioDetail() {
     const [modalContent, setModalContent] = useState(null);
 
     const portfolio = portfolioData().find((item) => item.id === Number(id));
-    const { title, description, layout, type, date, link, video, image } = portfolio;
+    const { title, description, layout, type, date, link, video, image, code, css } = portfolio;
 
     //lazy loading
     const { ref, inView } = useInView({ triggerOnce: true });
@@ -95,7 +97,23 @@ export default function PortfolioDetail() {
                         />
                     ))}
                 </div>
+
+                {/* code sample*/}
+                <div className="subtitle">
+                </div>
+                {code && css &&(
+                    <>
+                        <SyntaxHighlighter language="jsx" style={nightOwl} className="code">
+                            {code}
+                        </SyntaxHighlighter>                        <SyntaxHighlighter language="css" style={nightOwl} className="code">
+                            {css}
+                        </SyntaxHighlighter>
+                    </>
+                )}
             </section>
+
+
+
 
 
             {/* Modal */}

@@ -706,9 +706,6 @@ main.page h1.page-title {
   margin: 2rem 0;
 }
 
-.react-horizontal-scrolling-menu--scroll-container {
-  position: relative;
-}
 .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
   background-color: transparent;
 }
@@ -908,7 +905,7 @@ video.mobile {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  margin: 3rem 0;
+  margin: 5rem 0;
   padding: 0 1rem;
 }
 .bottom-wrapper .screenshot-container img {
@@ -940,6 +937,11 @@ video.mobile {
 .bottom-wrapper .screenshot-container img.mobile {
   max-width: 15rem;
   aspect-ratio: 9/19;
+}
+
+.code {
+  width: 100%;
+  padding: 1rem;
 }
 
 /* modal*/

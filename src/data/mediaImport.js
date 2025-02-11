@@ -24,14 +24,12 @@ import recruiter2 from '../img/work/screenshot/recruiter2.png';
 import candidate from '../img/work/screenshot/candidate0.png';
 import candidate1 from '../img/work/screenshot/candidate1.png';
 import candidate2 from '../img/work/screenshot/candidate2.png';
-import recruiterCode from '../img/work/screenshot/mirage-code.png';
 import recruiterVideo from '../img/work/video/recruiter.mp4';
 
 import PauthMockup from '../img/work/screenshot/pauth-mockup.png';
 import Pauth2 from '../img/work/screenshot/P+nav2.png';
 import Pauth3 from '../img/work/screenshot/P+nav3.png';
 import Pauth4 from '../img/work/screenshot/P+nav4.png';
-import PauthCode from '../img/work/screenshot/Pauth-code.png';
 import PauthVideo from '../img/work/video/P+Auth.mp4';
 
 import Nautilus1 from '../img/work/screenshot/nautilus0.png';
@@ -44,7 +42,6 @@ import NemoMockup from '../img/work/screenshot/nemo- mockup.png';
 import Nemo1 from '../img/work/screenshot/nemo0.png';
 import Nemo2 from '../img/work/screenshot/nemo1.png';
 import Nemo4 from '../img/work/screenshot/nemo3.png';
-import NemoCode from '../img/work/screenshot/nemo-code.png';
 import NemoVideo from '../img/work/video/nemo-video.mp4';
 
 import Pplus1 from '../img/work/screenshot/pplus1.png';
@@ -59,14 +56,12 @@ import mlm1 from '../img/work/screenshot/mlm0.png';
 import mlm2 from '../img/work/screenshot/mlm1.png';
 import mlm3 from '../img/work/screenshot/mlm2.png';
 import mlm4 from '../img/work/screenshot/mlm3.png';
-import mlmCode from '../img/work/screenshot/mlm-code.png';
 import mlmVideo from '../img/work/video/mlm-video.mp4';
 
 import PcomNavMockup from '../img/work/screenshot/pcom-nav-mockup.png';
 import PcomNav1 from '../img/work/screenshot/pcom-nav0.png';
 import PcomNav2 from '../img/work/screenshot/pcom-nav1.png';
 import PcomNav3 from '../img/work/screenshot/pcom-nav2.png';
-import PcomNavCode from '../img/work/screenshot/pcom-code.png';
 import PcomNavVideo from '../img/work/video/pcom-nav-video.mp4';
 
 import UlanaMockup from '../img/work/screenshot/ulana-mockup.png';
@@ -81,6 +76,12 @@ import Park2 from '../img/work/screenshot/park2.png';
 import Park3 from '../img/work/screenshot/park3.png';
 import ParkVideo from '../img/work/video/park-video.mp4';
 
+import virtualSchoolMockup from '../img/work/screenshot/virtualSchool-mockup.png';
+import virtualSchool1 from '../img/work/screenshot/virtualSchool1.png';
+import virtualSchool2 from '../img/work/screenshot/virtualSchool2.png';
+import virtualSchool3 from '../img/work/screenshot/virtualSchool3.png';
+import virtualSchool4 from '../img/work/screenshot/virtualSchool4.png';
+import virtualSchoolVideo from '../img/work/video/virtualSchool-video.mp4';
 
 export const media = {
     UXCareer: {
@@ -99,12 +100,12 @@ export const media = {
     },
     Recruiter: {
         mockup: recruiterMockup,
-        images: [recruiter0, recruiter1, recruiter2, candidate, candidate1, candidate2, recruiterCode],
+        images: [recruiter0, recruiter1, recruiter2, candidate, candidate1, candidate2],
         video: recruiterVideo,
     },
     Pauth: {
         mockup: PauthMockup,
-        images: [Pauth2, Pauth3, Pauth4, PauthCode],
+        images: [Pauth2, Pauth3, Pauth4],
         video: PauthVideo,
     },
     Nautilus: {
@@ -113,7 +114,7 @@ export const media = {
     },
     Nemo: {
         mockup: NemoMockup,
-        images: [Nemo1, Nemo2, Nemo4, NemoCode],
+        images: [Nemo1, Nemo2, Nemo4],
         video: NemoVideo,
     },
     Pplus: {
@@ -122,12 +123,12 @@ export const media = {
     },
     Mlm: {
         mockup: mlmMockup,
-        images: [mlm2, mlm1, mlm3, mlm4, mlmCode],
+        images: [mlm2, mlm1, mlm3, mlm4],
         video: mlmVideo,
     },
     PcomNav: {
         mockup: PcomNavMockup,
-        images: [PcomNav3, PcomNav2, PcomNav1, PcomNavCode],
+        images: [PcomNav3, PcomNav2, PcomNav1],
         video: PcomNavVideo,
     },
     Ulana: {
@@ -139,5 +140,10 @@ export const media = {
         mockup: ParkMockup,
         images: [Park1, Park2, Park3],
         video: ParkVideo,
+    },
+    virtualSchool: {
+        mockup: virtualSchoolMockup,
+        images: [virtualSchool1, virtualSchool2, virtualSchool3, virtualSchool4],
+        video: virtualSchoolVideo,
     },
 };

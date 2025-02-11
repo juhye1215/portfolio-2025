@@ -168,7 +168,7 @@ video {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1.5rem;
-        margin: 3rem 0;
+        margin: 5rem 0;
         padding: 0 1rem;
 
         img {
@@ -197,6 +197,11 @@ video {
             }
         }
     }
+}
+
+.code {
+    width: 100%;
+    padding: 1rem;
 }
 
 /* modal*/
