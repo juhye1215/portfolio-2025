@@ -80,7 +80,7 @@ function JobDetail() {
         video: media.virtualSchool.video,
         mockup: media.virtualSchool.mockup,
         image: media.virtualSchool.images,
-        description: 'I developed a high-end real estate marketing website using WordPress, designed to showcase premium properties with an elegant and modern user experience. The platform provides potential buyers with stunning property visuals, immersive virtual tours, and detailed descriptions to enhance engagement and drive conversions',
+        description: 'I developed a prototype focused on guiding students through career exploration and job placement, drawing inspiration from Pearsons Virtual Schools platform. This prototype offers a comprehensive suite of tools and resources designed to assist students in identifying potential career paths and securing employment opportunities',
         code: `
 import React, {useState, useEffect} from "react";
 import OpenSeadragon from "openseadragon";
