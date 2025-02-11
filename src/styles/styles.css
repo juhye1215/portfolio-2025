@@ -706,6 +706,9 @@ main.page h1.page-title {
   margin: 2rem 0;
 }
 
+.react-horizontal-scrolling-menu--scroll-container {
+  position: relative;
+}
 .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
   background-color: transparent;
 }

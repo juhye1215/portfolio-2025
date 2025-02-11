@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 
 export const useSwipe = (ref) => {
     const pos = useRef({ start: { x: 0, y: 0 }, end: { x: 0, y: 0 } });
-    const minSwipeDistance = 50;
+    const minSwipeDistance = 10;
 
     const onMouseDown = (ev) => {
         pos.current.start = { x: ev.clientX, y: ev.clientY };

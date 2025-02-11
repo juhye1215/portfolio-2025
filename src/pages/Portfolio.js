@@ -27,7 +27,7 @@ export default function Portfolio() {
 
                 <div className='row'>
                     <BackButton to="/" />
-                    <h1 className="page-title">Dev projects</h1>
+                    <h1 className="page-title">work projects</h1>
                     <div></div>
                 </div>
 
@@ -75,6 +75,29 @@ export default function Portfolio() {
                         </ScrollMenu>
                     </section>
 
+                    
+                    <section className='card-wrapper'>
+                        <h2>marketing </h2>
+                        <div className='line'></div>
+                        <ScrollMenu
+                            onWheel={onWheel}
+                            onMouseDown={onMouseDown}
+                            onMouseMove={onMouseMove}
+                            onMouseUp={() => onMouseUp(ref.current)}
+                            apiRef={ref}
+                        >
+                            {filterItemsByCategory('marketing').map((item) => (
+                                <Card
+                                    key={item.id}
+                                    image={item.mockup}
+                                    title={item.title}
+                                    link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
+                                />
+                            ))}
+                        </ScrollMenu>
+                    </section>
+
+
                     <section className='card-wrapper'>
                         <h2>design System </h2>
                         <div className='line'></div>
@@ -117,26 +140,7 @@ export default function Portfolio() {
                         </ScrollMenu>
                     </section>
 
-                    <section className='card-wrapper'>
-                        <h2>marketing </h2>
-                        <div className='line'></div>
-                        <ScrollMenu
-                            onWheel={onWheel}
-                            onMouseDown={onMouseDown}
-                            onMouseMove={onMouseMove}
-                            onMouseUp={() => onMouseUp(ref.current)}
-                            apiRef={ref}
-                        >
-                            {filterItemsByCategory('marketing').map((item) => (
-                                <Card
-                                    key={item.id}
-                                    image={item.mockup}
-                                    title={item.title}
-                                    link={`${process.env.PUBLIC_URL}/portfolio/${item.id}`}
-                                />
-                            ))}
-                        </ScrollMenu>
-                    </section>
+
                 </div >
             </main >
         </>
