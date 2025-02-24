@@ -706,6 +706,10 @@ main.page h1.page-title {
   margin: 2rem 0;
 }
 
+.react-horizontal-scrolling-menu {
+  touch-action: pan-x;
+}
+
 .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
   background-color: transparent;
 }
@@ -1043,7 +1047,7 @@ video.mobile {
 
 .card {
   width: 40rem;
-  padding: 0.75rem;
+  padding: 0.75rem 0.25rem;
   background-color: transparent;
   margin-right: 1rem;
   border-radius: 0.5rem;

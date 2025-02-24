@@ -54,7 +54,8 @@ main.page {
         margin: 2rem 0;
     }
 }
-
+.react-horizontal-scrolling-menu{
+      touch-action: pan-x;}
 .react-horizontal-scrolling-menu--scroll-container {
     &::-webkit-scrollbar {
         background-color: transparent;
