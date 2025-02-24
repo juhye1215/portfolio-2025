@@ -746,6 +746,11 @@ main.page h1.page-title {
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
 }
+@media (max-width: 1024px) {
+  .react-horizontal-scrolling-menu--arrow-right .scroll-btn, .react-horizontal-scrolling-menu--arrow-left .scroll-btn {
+    display: none;
+  }
+}
 
 .bg-wrapper {
   padding-top: 2rem;
@@ -1038,7 +1043,7 @@ video.mobile {
 
 .card {
   width: 40rem;
-  padding: 0.75rem 0;
+  padding: 0.75rem;
   background-color: transparent;
   margin-right: 1rem;
   border-radius: 0.5rem;

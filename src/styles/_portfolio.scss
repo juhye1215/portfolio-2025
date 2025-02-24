@@ -58,6 +58,7 @@ main.page {
 .react-horizontal-scrolling-menu--scroll-container {
     &::-webkit-scrollbar {
         background-color: transparent;
+
     }
     &::-webkit-scrollbar-track {
         background: transparent;
@@ -100,6 +101,10 @@ main.page {
         border-top-left-radius: 24px;
         border-bottom-left-radius: 24px;
        }
+
+       @media (max-width: $tablet-lg) {
+             display: none;   
+    }
     }
     
 }

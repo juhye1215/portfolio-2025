@@ -36,8 +36,6 @@ export default function Portfolio() {
             <div className="line"></div>
 
             <ScrollMenu
-              LeftArrow={LeftArrow}
-              RightArrow={RightArrow}
               onWheel={onWheel}
               onMouseDown={onMouseDown}
               onMouseMove={onMouseMove}
